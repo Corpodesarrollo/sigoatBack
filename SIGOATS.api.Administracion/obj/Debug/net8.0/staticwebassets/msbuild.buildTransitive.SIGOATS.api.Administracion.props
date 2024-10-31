@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\SIGOATS.api.Administracion.props" />
+</Project>

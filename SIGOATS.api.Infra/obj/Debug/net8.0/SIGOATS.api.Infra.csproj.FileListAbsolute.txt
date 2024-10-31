@@ -1,0 +1,15 @@
+C:\Temp\SIGOATS.api\SIGOATS.api.Infra\bin\Debug\net8.0\SIGOATS.api.Infra.deps.json
+C:\Temp\SIGOATS.api\SIGOATS.api.Infra\bin\Debug\net8.0\SIGOATS.api.Infra.dll
+C:\Temp\SIGOATS.api\SIGOATS.api.Infra\bin\Debug\net8.0\SIGOATS.api.Infra.pdb
+C:\Temp\SIGOATS.api\SIGOATS.api.Infra\bin\Debug\net8.0\SIGOATS.api.Core.dll
+C:\Temp\SIGOATS.api\SIGOATS.api.Infra\bin\Debug\net8.0\SIGOATS.api.Core.pdb
+C:\Temp\SIGOATS.api\SIGOATS.api.Infra\obj\Debug\net8.0\SIGOATS.api.Infra.csproj.AssemblyReference.cache
+C:\Temp\SIGOATS.api\SIGOATS.api.Infra\obj\Debug\net8.0\SIGOATS.api.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Temp\SIGOATS.api\SIGOATS.api.Infra\obj\Debug\net8.0\SIGOATS.api.Infra.AssemblyInfoInputs.cache
+C:\Temp\SIGOATS.api\SIGOATS.api.Infra\obj\Debug\net8.0\SIGOATS.api.Infra.AssemblyInfo.cs
+C:\Temp\SIGOATS.api\SIGOATS.api.Infra\obj\Debug\net8.0\SIGOATS.api.Infra.csproj.CoreCompileInputs.cache
+C:\Temp\SIGOATS.api\SIGOATS.api.Infra\obj\Debug\net8.0\SIGOATS..CF607742.Up2Date
+C:\Temp\SIGOATS.api\SIGOATS.api.Infra\obj\Debug\net8.0\SIGOATS.api.Infra.dll
+C:\Temp\SIGOATS.api\SIGOATS.api.Infra\obj\Debug\net8.0\refint\SIGOATS.api.Infra.dll
+C:\Temp\SIGOATS.api\SIGOATS.api.Infra\obj\Debug\net8.0\SIGOATS.api.Infra.pdb
+C:\Temp\SIGOATS.api\SIGOATS.api.Infra\obj\Debug\net8.0\ref\SIGOATS.api.Infra.dll

@@ -1,0 +1,12 @@
+C:\Temp\SIGOATS.api\SIGOATS.api.Core\bin\Debug\net8.0\SIGOATS.api.Core.deps.json
+C:\Temp\SIGOATS.api\SIGOATS.api.Core\bin\Debug\net8.0\SIGOATS.api.Core.dll
+C:\Temp\SIGOATS.api\SIGOATS.api.Core\bin\Debug\net8.0\SIGOATS.api.Core.pdb
+C:\Temp\SIGOATS.api\SIGOATS.api.Core\obj\Debug\net8.0\SIGOATS.api.Core.csproj.AssemblyReference.cache
+C:\Temp\SIGOATS.api\SIGOATS.api.Core\obj\Debug\net8.0\SIGOATS.api.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Temp\SIGOATS.api\SIGOATS.api.Core\obj\Debug\net8.0\SIGOATS.api.Core.AssemblyInfoInputs.cache
+C:\Temp\SIGOATS.api\SIGOATS.api.Core\obj\Debug\net8.0\SIGOATS.api.Core.AssemblyInfo.cs
+C:\Temp\SIGOATS.api\SIGOATS.api.Core\obj\Debug\net8.0\SIGOATS.api.Core.csproj.CoreCompileInputs.cache
+C:\Temp\SIGOATS.api\SIGOATS.api.Core\obj\Debug\net8.0\SIGOATS.api.Core.dll
+C:\Temp\SIGOATS.api\SIGOATS.api.Core\obj\Debug\net8.0\refint\SIGOATS.api.Core.dll
+C:\Temp\SIGOATS.api\SIGOATS.api.Core\obj\Debug\net8.0\SIGOATS.api.Core.pdb
+C:\Temp\SIGOATS.api\SIGOATS.api.Core\obj\Debug\net8.0\ref\SIGOATS.api.Core.dll

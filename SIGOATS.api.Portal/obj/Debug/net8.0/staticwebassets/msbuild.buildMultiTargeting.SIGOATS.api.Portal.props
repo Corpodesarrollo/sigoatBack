@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\SIGOATS.api.Portal.props" />
+</Project>
