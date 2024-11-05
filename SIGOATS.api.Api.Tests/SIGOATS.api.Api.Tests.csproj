@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -32,7 +32,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SIGOATS.api.Api\SIGOATS.api.Principal.csproj" />
     <ProjectReference Include="..\SIGOATS.api.Core\SIGOATS.api.Core.csproj" />
   </ItemGroup>
 
