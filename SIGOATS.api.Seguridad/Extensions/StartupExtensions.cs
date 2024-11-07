@@ -1,35 +1,23 @@
-using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using SIGOATS.api.Core.Interfaces;
+using SIGOATS.api.Infra;
+using SIGOATS.api.Infra.Repositorios;
 
 
 namespace SIGOATS.api.Api.Extensions
 {
-	internal static class StartupExtensions
-	{
+    internal static class StartupExtensions
+    {
         public static WebApplicationBuilder CustomConfigureServices(this WebApplicationBuilder pBuilder)
         {
-            pBuilder.Services.AddDbContext<DbContext>(options =>
-                options.UseSqlServer(pBuilder.Configuration.GetConnectionString("DBConnectionString")));
+            pBuilder.Services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(pBuilder.Configuration.GetConnectionString("APP_DBConnectionString")));
 
-            //pBuilder.Services.AddScoped<IXXX, XXXRepo>();
-
-            //pBuilder.AutomapConfiguration();
+            pBuilder.Services.AddScoped<IAuthRepo, AuthRepo>();
+            pBuilder.Services.AddScoped<PermisosRepo>();
+            pBuilder.Services.AddScoped<PermisosRolesRepo>();
 
             return pBuilder;
         }
-
-
-        /*private static WebApplicationBuilder AutomapConfiguration(this WebApplicationBuilder pBuilder)
-        {
-            MapperConfiguration mapConf = new MapperConfiguration(
-                cfg =>
-                {
-                    cfg.CreateMap<XXX__Request, XXX>();
-                });
-
-            pBuilder.Services.AddSingleton(mapConf.CreateMapper());
-
-            return pBuilder;
-        }*/
     }
 }

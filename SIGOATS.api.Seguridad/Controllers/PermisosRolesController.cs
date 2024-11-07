@@ -5,7 +5,7 @@ using SIGOATS.api.Infra.Repositorios;
 
 namespace SIGOATS.api.Seguridad.Controllers
 {
-    public class PermisosController(PermisosRepo repo) : GenericController<Permisos, PermisosDto>(repo)
+    public class PermisosRolesController(PermisosRolesRepo repo) : GenericController<PermisosRoles, PermisosRolesDto>(repo)
     {
     }
 }
