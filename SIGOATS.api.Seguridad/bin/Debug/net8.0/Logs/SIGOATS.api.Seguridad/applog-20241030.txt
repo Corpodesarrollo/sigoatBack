@@ -1,56 +1,205 @@
-2024-10-30 19:04:09.764 -05:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
-2024-10-30 20:59:42.655 -05:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
-2024-10-30 20:59:42.801 -05:00 [INF] User profile is available. Using 'C:\Users\charl\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
-2024-10-30 20:59:42.935 -05:00 [INF] Now listening on: https://localhost:7248
-2024-10-30 20:59:42.935 -05:00 [INF] Now listening on: http://localhost:5264
-2024-10-30 20:59:42.966 -05:00 [INF] Application started. Press Ctrl+C to shut down.
-2024-10-30 20:59:42.967 -05:00 [INF] Hosting environment: Development
-2024-10-30 20:59:42.967 -05:00 [INF] Content root path: C:\Temp\SIGOATS.api\SIGOATS.api.Seguridad
-2024-10-30 20:59:43.698 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/ - null null
-2024-10-30 20:59:43.796 -05:00 [INF] No cached response available for this request.
-2024-10-30 20:59:43.819 -05:00 [INF] The response could not be cached for this request.
-2024-10-30 20:59:43.844 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/ - 404 0 null 146.2274ms
-2024-10-30 20:59:43.851 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7248/, Response status code: 404
-2024-10-30 20:59:53.804 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger - null null
-2024-10-30 20:59:53.810 -05:00 [INF] No cached response available for this request.
-2024-10-30 20:59:53.812 -05:00 [INF] The response could not be cached for this request.
-2024-10-30 20:59:53.813 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger - 301 0 null 8.74ms
-2024-10-30 20:59:53.817 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger/index.html - null null
-2024-10-30 20:59:53.819 -05:00 [INF] No cached response available for this request.
-2024-10-30 20:59:53.882 -05:00 [INF] The response could not be cached for this request.
-2024-10-30 20:59:53.887 -05:00 [WRN] Unable to configure Browser Link script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression.
-2024-10-30 20:59:53.907 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger/index.css - null null
-2024-10-30 20:59:53.907 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger/swagger-ui-bundle.js - null null
-2024-10-30 20:59:53.907 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger/swagger-ui.css - null null
-2024-10-30 20:59:53.907 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger/swagger-ui-standalone-preset.js - null null
-2024-10-30 20:59:53.907 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger/index.js - null null
-2024-10-30 20:59:53.909 -05:00 [INF] No cached response available for this request.
-2024-10-30 20:59:53.909 -05:00 [INF] No cached response available for this request.
-2024-10-30 20:59:53.909 -05:00 [INF] No cached response available for this request.
-2024-10-30 20:59:53.909 -05:00 [INF] No cached response available for this request.
-2024-10-30 20:59:53.912 -05:00 [INF] No cached response available for this request.
-2024-10-30 20:59:53.914 -05:00 [INF] The response could not be cached for this request.
-2024-10-30 20:59:53.916 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger/index.js - 200 null application/javascript;charset=utf-8 7.657ms
-2024-10-30 20:59:53.929 -05:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
-2024-10-30 20:59:53.929 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
-2024-10-30 20:59:53.929 -05:00 [INF] The response could not be cached for this request.
-2024-10-30 20:59:53.929 -05:00 [INF] The response could not be cached for this request.
-2024-10-30 20:59:53.929 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger/index.css - 200 null text/css 22.6724ms
-2024-10-30 20:59:53.958 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger/swagger-ui.css - 200 null text/css 50.7249ms
-2024-10-30 20:59:53.963 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
-2024-10-30 20:59:53.969 -05:00 [INF] The response could not be cached for this request.
-2024-10-30 20:59:53.969 -05:00 [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression.
-2024-10-30 20:59:53.973 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger/swagger-ui-standalone-preset.js - 200 null text/javascript 64.4619ms
-2024-10-30 20:59:53.975 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger/index.html - 200 null text/html;charset=utf-8 157.6892ms
-2024-10-30 20:59:54.020 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
-2024-10-30 20:59:54.020 -05:00 [INF] The response could not be cached for this request.
-2024-10-30 20:59:54.021 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger/swagger-ui-bundle.js - 200 null text/javascript 114.4125ms
-2024-10-30 20:59:54.122 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger/v1/swagger.json - null null
-2024-10-30 20:59:54.123 -05:00 [INF] No cached response available for this request.
-2024-10-30 20:59:54.140 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger/favicon-32x32.png - null null
-2024-10-30 20:59:54.140 -05:00 [INF] No cached response available for this request.
-2024-10-30 20:59:54.141 -05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
-2024-10-30 20:59:54.141 -05:00 [INF] The response could not be cached for this request.
-2024-10-30 20:59:54.141 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger/favicon-32x32.png - 200 628 image/png 1.5748ms
-2024-10-30 20:59:54.157 -05:00 [INF] The response could not be cached for this request.
-2024-10-30 20:59:54.157 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 34.7231ms
+2024-10-30 22:33:58.941 -05:00 [INF] User profile is available. Using 'C:\Users\charl\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-30 22:33:59.233 -05:00 [INF] Now listening on: https://localhost:7248
+2024-10-30 22:33:59.233 -05:00 [INF] Now listening on: http://localhost:5264
+2024-10-30 22:33:59.269 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-30 22:33:59.270 -05:00 [INF] Hosting environment: Development
+2024-10-30 22:33:59.270 -05:00 [INF] Content root path: C:\Users\charl\OneDrive\Documentos\GitHub\SIGOATS\sigoatBack\SIGOATS.api.Seguridad
+2024-10-30 22:34:00.020 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/ - null null
+2024-10-30 22:34:00.183 -05:00 [INF] No cached response available for this request.
+2024-10-30 22:34:00.221 -05:00 [INF] The response could not be cached for this request.
+2024-10-30 22:34:00.236 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/ - 404 0 null 223.7887ms
+2024-10-30 22:34:00.238 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7248/, Response status code: 404
+2024-10-30 22:34:17.204 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger - null null
+2024-10-30 22:34:17.207 -05:00 [INF] No cached response available for this request.
+2024-10-30 22:34:17.209 -05:00 [INF] The response could not be cached for this request.
+2024-10-30 22:34:17.210 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger - 301 0 null 6.4638ms
+2024-10-30 22:34:17.213 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger/index.html - null null
+2024-10-30 22:34:17.215 -05:00 [INF] No cached response available for this request.
+2024-10-30 22:34:17.265 -05:00 [INF] The response could not be cached for this request.
+2024-10-30 22:34:17.272 -05:00 [WRN] Unable to configure Browser Link script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression.
+2024-10-30 22:34:17.290 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger/index.css - null null
+2024-10-30 22:34:17.291 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger/index.js - null null
+2024-10-30 22:34:17.291 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger/swagger-ui-bundle.js - null null
+2024-10-30 22:34:17.291 -05:00 [INF] No cached response available for this request.
+2024-10-30 22:34:17.291 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger/swagger-ui.css - null null
+2024-10-30 22:34:17.291 -05:00 [INF] No cached response available for this request.
+2024-10-30 22:34:17.291 -05:00 [INF] No cached response available for this request.
+2024-10-30 22:34:17.291 -05:00 [INF] No cached response available for this request.
+2024-10-30 22:34:17.292 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger/swagger-ui-standalone-preset.js - null null
+2024-10-30 22:34:17.296 -05:00 [INF] No cached response available for this request.
+2024-10-30 22:34:17.299 -05:00 [INF] The response could not be cached for this request.
+2024-10-30 22:34:17.301 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger/index.js - 200 null application/javascript;charset=utf-8 9.529ms
+2024-10-30 22:34:17.329 -05:00 [INF] The file /swagger-ui-bundle.js was not modified
+2024-10-30 22:34:17.329 -05:00 [INF] The file /index.css was not modified
+2024-10-30 22:34:17.329 -05:00 [INF] The file /swagger-ui.css was not modified
+2024-10-30 22:34:17.329 -05:00 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2024-10-30 22:34:17.330 -05:00 [INF] The response could not be cached for this request.
+2024-10-30 22:34:17.330 -05:00 [INF] The response could not be cached for this request.
+2024-10-30 22:34:17.330 -05:00 [INF] The response could not be cached for this request.
+2024-10-30 22:34:17.330 -05:00 [INF] The response could not be cached for this request.
+2024-10-30 22:34:17.330 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger/swagger-ui-standalone-preset.js - 304 null text/javascript 38.4296ms
+2024-10-30 22:34:17.330 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger/swagger-ui-bundle.js - 304 null text/javascript 39.8204ms
+2024-10-30 22:34:17.330 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger/index.css - 304 null text/css 39.8518ms
+2024-10-30 22:34:17.330 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger/swagger-ui.css - 304 null text/css 39.8749ms
+2024-10-30 22:34:17.343 -05:00 [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression.
+2024-10-30 22:34:17.346 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger/index.html - 200 null text/html;charset=utf-8 133.0327ms
+2024-10-30 22:34:17.468 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger/v1/swagger.json - null null
+2024-10-30 22:34:17.468 -05:00 [INF] No cached response available for this request.
+2024-10-30 22:34:17.591 -05:00 [INF] The response could not be cached for this request.
+2024-10-30 22:34:17.591 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 123.9489ms
+2024-10-30 22:34:30.191 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/Auth - null null
+2024-10-30 22:34:30.193 -05:00 [INF] No cached response available for this request.
+2024-10-30 22:34:30.201 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-10-30 22:34:30.205 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at SISPRO.TRV.Web.MVCCore.Extensions.IApplicationBuilderExtensions.<>c.<<UseSetHeaders>b__0_0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-10-30 22:34:30.292 -05:00 [INF] --------------------------------------------------------------------------------------------
+Message of InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+--------------------------------------------------------------------------------------------
+
+Code: ERROR
+GUID: ffce3dba-669e-42e8-af08-fd24bb536432
+Timestamp: 2024-10-30 10:34:30.277 PM
+
+TargetSite: Void MoveNext()
+
+
+StackTrace:
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at SISPRO.TRV.Web.MVCCore.Extensions.IApplicationBuilderExtensions.<>c.<<UseSetHeaders>b__0_0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+
+Code: ERROR
+Timestamp: 2024-10-30 10:34:30.263 PM
+DomainName: DEVELOP
+UserName: Charles
+Thread-UserName: 
+MachineName: DEVELOP
+OSVersion: Microsoft Windows NT 10.0.22631.0
+ApplicationDomainID: 1
+ManagedThreadId: 17
+ApplicationName: SIGOATS.api.Seguridad
+ApplicationVersion: 1.0.0.0
+ApplicationProduct: SIGOATS.api.Seguridad
+ProcessorCount: 16
+Is64BitOperatingSystem: True
+Is64BitProcess: True
+SystemPageSize: 4096
+Type: Any
+
+Environment.DomainName: DEVELOP
+Environment.UserName: Charles
+Environment.MachineName: DEVELOP
+OSVersion: Microsoft Windows NT 10.0.22631.0
+ApplicationDomainID: 1
+ManagedThreadId: 17
+IsTheMainThread: False
+ApplicationName: SIGOATS.api.Seguridad
+ApplicationVersion: 1.0.0.0
+ProcessorCount: 16
+Is64BitOperatingSystem: True
+Is64BitProcess: True
+User.Alias: 
+WindowsIdentity (imp): 
+WindowsIdentity: DEVELOP\Charles
+ASPNETCORE_ENVIRONMENT: Development
+
+2024-10-30 22:34:30.334 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/Auth - 500 null text/plain 143.2534ms
+2024-10-30 22:38:01.866 -05:00 [INF] User profile is available. Using 'C:\Users\charl\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-30 22:38:02.039 -05:00 [INF] Now listening on: https://localhost:7248
+2024-10-30 22:38:02.039 -05:00 [INF] Now listening on: http://localhost:5264
+2024-10-30 22:38:02.073 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-30 22:38:02.074 -05:00 [INF] Hosting environment: Development
+2024-10-30 22:38:02.074 -05:00 [INF] Content root path: C:\Users\charl\OneDrive\Documentos\GitHub\SIGOATS\sigoatBack\SIGOATS.api.Seguridad
+2024-10-30 22:38:02.650 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/ - null null
+2024-10-30 22:38:02.752 -05:00 [INF] No cached response available for this request.
+2024-10-30 22:38:02.792 -05:00 [INF] ESFAuthentication was not authenticated. Failure message: Authentication failed
+2024-10-30 22:38:02.808 -05:00 [INF] The response could not be cached for this request.
+2024-10-30 22:38:02.817 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/ - 404 0 null 170.8226ms
+2024-10-30 22:38:02.818 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7248/, Response status code: 404
+2024-10-30 22:38:08.116 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger - null null
+2024-10-30 22:38:08.120 -05:00 [INF] No cached response available for this request.
+2024-10-30 22:38:08.122 -05:00 [INF] ESFAuthentication was not authenticated. Failure message: Authentication failed
+2024-10-30 22:38:08.129 -05:00 [INF] The response could not be cached for this request.
+2024-10-30 22:38:08.131 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger - 301 0 null 14.9165ms
+2024-10-30 22:38:08.135 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger/index.html - null null
+2024-10-30 22:38:08.138 -05:00 [INF] No cached response available for this request.
+2024-10-30 22:38:08.139 -05:00 [INF] ESFAuthentication was not authenticated. Failure message: Authentication failed
+2024-10-30 22:38:08.184 -05:00 [INF] The response could not be cached for this request.
+2024-10-30 22:38:08.189 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger/swagger-ui.css - null null
+2024-10-30 22:38:08.189 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger/index.css - null null
+2024-10-30 22:38:08.189 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger/index.js - null null
+2024-10-30 22:38:08.189 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger/swagger-ui-bundle.js - null null
+2024-10-30 22:38:08.190 -05:00 [INF] No cached response available for this request.
+2024-10-30 22:38:08.190 -05:00 [INF] No cached response available for this request.
+2024-10-30 22:38:08.190 -05:00 [INF] No cached response available for this request.
+2024-10-30 22:38:08.190 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger/swagger-ui-standalone-preset.js - null null
+2024-10-30 22:38:08.191 -05:00 [INF] No cached response available for this request.
+2024-10-30 22:38:08.190 -05:00 [INF] ESFAuthentication was not authenticated. Failure message: Authentication failed
+2024-10-30 22:38:08.192 -05:00 [INF] ESFAuthentication was not authenticated. Failure message: Authentication failed
+2024-10-30 22:38:08.192 -05:00 [INF] No cached response available for this request.
+2024-10-30 22:38:08.192 -05:00 [INF] ESFAuthentication was not authenticated. Failure message: Authentication failed
+2024-10-30 22:38:08.192 -05:00 [INF] ESFAuthentication was not authenticated. Failure message: Authentication failed
+2024-10-30 22:38:08.192 -05:00 [INF] ESFAuthentication was not authenticated. Failure message: Authentication failed
+2024-10-30 22:38:08.195 -05:00 [INF] The response could not be cached for this request.
+2024-10-30 22:38:08.195 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger/index.js - 200 null application/javascript;charset=utf-8 5.7054ms
+2024-10-30 22:38:08.196 -05:00 [WRN] Unable to configure Browser Link script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression.
+2024-10-30 22:38:08.199 -05:00 [INF] The file /index.css was not modified
+2024-10-30 22:38:08.199 -05:00 [INF] The file /swagger-ui.css was not modified
+2024-10-30 22:38:08.199 -05:00 [INF] The file /swagger-ui-bundle.js was not modified
+2024-10-30 22:38:08.199 -05:00 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2024-10-30 22:38:08.200 -05:00 [INF] The response could not be cached for this request.
+2024-10-30 22:38:08.200 -05:00 [INF] The response could not be cached for this request.
+2024-10-30 22:38:08.200 -05:00 [INF] The response could not be cached for this request.
+2024-10-30 22:38:08.200 -05:00 [INF] The response could not be cached for this request.
+2024-10-30 22:38:08.200 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger/swagger-ui-standalone-preset.js - 304 null text/javascript 10.4507ms
+2024-10-30 22:38:08.200 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger/swagger-ui.css - 304 null text/css 11.1682ms
+2024-10-30 22:38:08.200 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger/swagger-ui-bundle.js - 304 null text/javascript 11.1376ms
+2024-10-30 22:38:08.200 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger/index.css - 304 null text/css 11.1692ms
+2024-10-30 22:38:08.241 -05:00 [WRN] Unable to configure browser refresh script injection on the response. This may have been caused by the response's Content-Encoding: '["gzip"]'. Consider disabling response compression.
+2024-10-30 22:38:08.243 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger/index.html - 200 null text/html;charset=utf-8 108.3455ms
+2024-10-30 22:38:08.340 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/swagger/v1/swagger.json - null null
+2024-10-30 22:38:08.341 -05:00 [INF] No cached response available for this request.
+2024-10-30 22:38:08.341 -05:00 [INF] ESFAuthentication was not authenticated. Failure message: Authentication failed
+2024-10-30 22:38:08.457 -05:00 [INF] The response could not be cached for this request.
+2024-10-30 22:38:08.458 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 117.5988ms
+2024-10-30 22:38:13.403 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/Auth - null null
+2024-10-30 22:38:13.404 -05:00 [INF] No cached response available for this request.
+2024-10-30 22:38:13.405 -05:00 [INF] ESFAuthentication was not authenticated. Failure message: Authentication failed
+2024-10-30 22:38:13.406 -05:00 [INF] ESFAuthentication was not authenticated. Failure message: Authentication failed
+2024-10-30 22:38:13.408 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-10-30 22:38:13.411 -05:00 [INF] AuthenticationScheme: ESFAuthentication was challenged.
+2024-10-30 22:38:13.411 -05:00 [INF] The response could not be cached for this request.
+2024-10-30 22:38:13.411 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/Auth - 401 0 null 9.1468ms
+2024-10-30 22:40:33.867 -05:00 [INF] User profile is available. Using 'C:\Users\charl\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-30 22:40:34.028 -05:00 [INF] Now listening on: https://localhost:7248
+2024-10-30 22:40:34.028 -05:00 [INF] Now listening on: http://localhost:5264
+2024-10-30 22:40:34.064 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-30 22:40:34.064 -05:00 [INF] Hosting environment: Development
+2024-10-30 22:40:34.064 -05:00 [INF] Content root path: C:\Users\charl\OneDrive\Documentos\GitHub\SIGOATS\sigoatBack\SIGOATS.api.Seguridad
+2024-10-30 22:40:34.268 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7248/ - null null
+2024-10-30 22:40:34.356 -05:00 [INF] No cached response available for this request.
+2024-10-30 22:40:34.389 -05:00 [INF] ESFAuthentication was not authenticated. Failure message: Authentication failed
+2024-10-30 22:40:34.402 -05:00 [INF] The response could not be cached for this request.
+2024-10-30 22:40:34.413 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7248/ - 404 0 null 148.6703ms
+2024-10-30 22:40:34.415 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7248/, Response status code: 404

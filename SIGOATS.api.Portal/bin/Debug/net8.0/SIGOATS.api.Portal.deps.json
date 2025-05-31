@@ -1958,6 +1958,7 @@
       },
       "SIGOATS.api.Core/1.0.0": {
         "dependencies": {
+          "AutoMapper": "12.0.1",
           "FluentValidation": "11.10.0",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10",
@@ -1965,7 +1966,7 @@
         },
         "runtime": {
           "SIGOATS.api.Core.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -1979,7 +1980,7 @@
         },
         "runtime": {
           "SIGOATS.api.Infra.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }

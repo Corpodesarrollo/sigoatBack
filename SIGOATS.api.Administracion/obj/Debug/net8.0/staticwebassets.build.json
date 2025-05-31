@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "W3hBtOF2WrH8uzhqxJse3ut99DNlaKVaVJmvcx0kwdM=",
+  "Hash": "56jPgnNmRNYar8CgI3gPnXMUt+2g0/jhKLPIygqll+Q=",
   "Source": "SIGOATS.api.Administracion",
   "BasePath": "_content/SIGOATS.api.Administracion",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

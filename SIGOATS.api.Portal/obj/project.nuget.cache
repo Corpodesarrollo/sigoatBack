@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R+a6DITsgNk=",
+  "dgSpecHash": "lalqJWOnOKE=",
   "success": true,
-  "projectFilePath": "C:\\Temp\\SIGOATS.api\\SIGOATS.api.Portal\\SIGOATS.api.Portal.csproj",
+  "projectFilePath": "C:\\Users\\charl\\OneDrive\\Documentos\\GitHub\\SIGOATS\\sigoatBack\\SIGOATS.api.Portal\\SIGOATS.api.Portal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\charl\\.nuget\\packages\\aspnetcore.legacyauthcookiecompat\\2.0.5\\aspnetcore.legacyauthcookiecompat.2.0.5.nupkg.sha512",
     "C:\\Users\\charl\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",

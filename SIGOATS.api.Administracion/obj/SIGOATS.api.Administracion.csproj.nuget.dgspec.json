@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Temp\\SIGOATS.api\\SIGOATS.api.Administracion\\SIGOATS.api.Administracion.csproj": {}
+    "C:\\Users\\charl\\OneDrive\\Documentos\\GitHub\\SIGOATS\\sigoatBack\\SIGOATS.api.Administracion\\SIGOATS.api.Administracion.csproj": {}
   },
   "projects": {
-    "C:\\Temp\\SIGOATS.api\\SIGOATS.api.Administracion\\SIGOATS.api.Administracion.csproj": {
+    "C:\\Users\\charl\\OneDrive\\Documentos\\GitHub\\SIGOATS\\sigoatBack\\SIGOATS.api.Administracion\\SIGOATS.api.Administracion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Temp\\SIGOATS.api\\SIGOATS.api.Administracion\\SIGOATS.api.Administracion.csproj",
+        "projectUniqueName": "C:\\Users\\charl\\OneDrive\\Documentos\\GitHub\\SIGOATS\\sigoatBack\\SIGOATS.api.Administracion\\SIGOATS.api.Administracion.csproj",
         "projectName": "SIGOATS.api.Administracion",
-        "projectPath": "C:\\Temp\\SIGOATS.api\\SIGOATS.api.Administracion\\SIGOATS.api.Administracion.csproj",
+        "projectPath": "C:\\Users\\charl\\OneDrive\\Documentos\\GitHub\\SIGOATS\\sigoatBack\\SIGOATS.api.Administracion\\SIGOATS.api.Administracion.csproj",
         "packagesPath": "C:\\Users\\charl\\.nuget\\packages\\",
-        "outputPath": "C:\\Temp\\SIGOATS.api\\SIGOATS.api.Administracion\\obj\\",
+        "outputPath": "C:\\Users\\charl\\OneDrive\\Documentos\\GitHub\\SIGOATS\\sigoatBack\\SIGOATS.api.Administracion\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -34,11 +34,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Temp\\SIGOATS.api\\SIGOATS.api.Core\\SIGOATS.api.Core.csproj": {
-                "projectPath": "C:\\Temp\\SIGOATS.api\\SIGOATS.api.Core\\SIGOATS.api.Core.csproj"
+              "C:\\Users\\charl\\OneDrive\\Documentos\\GitHub\\SIGOATS\\sigoatBack\\SIGOATS.api.Core\\SIGOATS.api.Core.csproj": {
+                "projectPath": "C:\\Users\\charl\\OneDrive\\Documentos\\GitHub\\SIGOATS\\sigoatBack\\SIGOATS.api.Core\\SIGOATS.api.Core.csproj"
               },
-              "C:\\Temp\\SIGOATS.api\\SIGOATS.api.Infra\\SIGOATS.api.Infra.csproj": {
-                "projectPath": "C:\\Temp\\SIGOATS.api\\SIGOATS.api.Infra\\SIGOATS.api.Infra.csproj"
+              "C:\\Users\\charl\\OneDrive\\Documentos\\GitHub\\SIGOATS\\sigoatBack\\SIGOATS.api.Infra\\SIGOATS.api.Infra.csproj": {
+                "projectPath": "C:\\Users\\charl\\OneDrive\\Documentos\\GitHub\\SIGOATS\\sigoatBack\\SIGOATS.api.Infra\\SIGOATS.api.Infra.csproj"
               }
             }
           }
@@ -52,7 +52,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -226,18 +227,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Temp\\SIGOATS.api\\SIGOATS.api.Core\\SIGOATS.api.Core.csproj": {
+    "C:\\Users\\charl\\OneDrive\\Documentos\\GitHub\\SIGOATS\\sigoatBack\\SIGOATS.api.Core\\SIGOATS.api.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Temp\\SIGOATS.api\\SIGOATS.api.Core\\SIGOATS.api.Core.csproj",
+        "projectUniqueName": "C:\\Users\\charl\\OneDrive\\Documentos\\GitHub\\SIGOATS\\sigoatBack\\SIGOATS.api.Core\\SIGOATS.api.Core.csproj",
         "projectName": "SIGOATS.api.Core",
-        "projectPath": "C:\\Temp\\SIGOATS.api\\SIGOATS.api.Core\\SIGOATS.api.Core.csproj",
+        "projectPath": "C:\\Users\\charl\\OneDrive\\Documentos\\GitHub\\SIGOATS\\sigoatBack\\SIGOATS.api.Core\\SIGOATS.api.Core.csproj",
         "packagesPath": "C:\\Users\\charl\\.nuget\\packages\\",
-        "outputPath": "C:\\Temp\\SIGOATS.api\\SIGOATS.api.Core\\obj\\",
+        "outputPath": "C:\\Users\\charl\\OneDrive\\Documentos\\GitHub\\SIGOATS\\sigoatBack\\SIGOATS.api.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -271,12 +272,17 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[11.10.0, )"
@@ -310,18 +316,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Temp\\SIGOATS.api\\SIGOATS.api.Infra\\SIGOATS.api.Infra.csproj": {
+    "C:\\Users\\charl\\OneDrive\\Documentos\\GitHub\\SIGOATS\\sigoatBack\\SIGOATS.api.Infra\\SIGOATS.api.Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Temp\\SIGOATS.api\\SIGOATS.api.Infra\\SIGOATS.api.Infra.csproj",
+        "projectUniqueName": "C:\\Users\\charl\\OneDrive\\Documentos\\GitHub\\SIGOATS\\sigoatBack\\SIGOATS.api.Infra\\SIGOATS.api.Infra.csproj",
         "projectName": "SIGOATS.api.Infra",
-        "projectPath": "C:\\Temp\\SIGOATS.api\\SIGOATS.api.Infra\\SIGOATS.api.Infra.csproj",
+        "projectPath": "C:\\Users\\charl\\OneDrive\\Documentos\\GitHub\\SIGOATS\\sigoatBack\\SIGOATS.api.Infra\\SIGOATS.api.Infra.csproj",
         "packagesPath": "C:\\Users\\charl\\.nuget\\packages\\",
-        "outputPath": "C:\\Temp\\SIGOATS.api\\SIGOATS.api.Infra\\obj\\",
+        "outputPath": "C:\\Users\\charl\\OneDrive\\Documentos\\GitHub\\SIGOATS\\sigoatBack\\SIGOATS.api.Infra\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -344,8 +350,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Temp\\SIGOATS.api\\SIGOATS.api.Core\\SIGOATS.api.Core.csproj": {
-                "projectPath": "C:\\Temp\\SIGOATS.api\\SIGOATS.api.Core\\SIGOATS.api.Core.csproj"
+              "C:\\Users\\charl\\OneDrive\\Documentos\\GitHub\\SIGOATS\\sigoatBack\\SIGOATS.api.Core\\SIGOATS.api.Core.csproj": {
+                "projectPath": "C:\\Users\\charl\\OneDrive\\Documentos\\GitHub\\SIGOATS\\sigoatBack\\SIGOATS.api.Core\\SIGOATS.api.Core.csproj"
               }
             }
           }
@@ -359,7 +365,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -394,7 +401,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

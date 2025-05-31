@@ -1,1 +1,318 @@
-[]
+[
+  {
+    "ContainingType": "SIGOATS.api.Seguridad.Controllers.AuthController",
+    "Method": "Get",
+    "RelativePath": "Auth",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "SIGOATS.api.Core.DTO.UserDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SIGOATS.api.Infra.Common.GenericController\u00602[[SIGOATS.api.Core.Models.Menus, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SIGOATS.api.Core.DTO.MenusDto, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAll",
+    "RelativePath": "Menus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIGOATS.api.Infra.Common.GenericController\u00602[[SIGOATS.api.Core.Models.Menus, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SIGOATS.api.Core.DTO.MenusDto, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Post",
+    "RelativePath": "Menus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "SIGOATS.api.Core.DTO.MenusDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIGOATS.api.Infra.Common.GenericController\u00602[[SIGOATS.api.Core.Models.Menus, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SIGOATS.api.Core.DTO.MenusDto, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Put",
+    "RelativePath": "Menus",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "SIGOATS.api.Core.DTO.MenusDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIGOATS.api.Infra.Common.GenericController\u00602[[SIGOATS.api.Core.Models.Menus, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SIGOATS.api.Core.DTO.MenusDto, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetByID",
+    "RelativePath": "Menus/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIGOATS.api.Infra.Common.GenericController\u00602[[SIGOATS.api.Core.Models.Menus, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SIGOATS.api.Core.DTO.MenusDto, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "Menus/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIGOATS.api.Infra.Common.GenericController\u00602[[SIGOATS.api.Core.Models.Modulos, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SIGOATS.api.Core.DTO.ModulosDto, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAll",
+    "RelativePath": "Modulos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIGOATS.api.Infra.Common.GenericController\u00602[[SIGOATS.api.Core.Models.Modulos, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SIGOATS.api.Core.DTO.ModulosDto, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Post",
+    "RelativePath": "Modulos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "SIGOATS.api.Core.DTO.ModulosDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIGOATS.api.Infra.Common.GenericController\u00602[[SIGOATS.api.Core.Models.Modulos, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SIGOATS.api.Core.DTO.ModulosDto, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Put",
+    "RelativePath": "Modulos",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "SIGOATS.api.Core.DTO.ModulosDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIGOATS.api.Infra.Common.GenericController\u00602[[SIGOATS.api.Core.Models.Modulos, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SIGOATS.api.Core.DTO.ModulosDto, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetByID",
+    "RelativePath": "Modulos/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIGOATS.api.Infra.Common.GenericController\u00602[[SIGOATS.api.Core.Models.Modulos, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SIGOATS.api.Core.DTO.ModulosDto, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "Modulos/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIGOATS.api.Infra.Common.GenericController\u00602[[SIGOATS.api.Core.Models.Permisos, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SIGOATS.api.Core.DTO.PermisosDto, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAll",
+    "RelativePath": "Permisos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIGOATS.api.Infra.Common.GenericController\u00602[[SIGOATS.api.Core.Models.Permisos, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SIGOATS.api.Core.DTO.PermisosDto, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Post",
+    "RelativePath": "Permisos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "SIGOATS.api.Core.DTO.PermisosDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIGOATS.api.Infra.Common.GenericController\u00602[[SIGOATS.api.Core.Models.Permisos, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SIGOATS.api.Core.DTO.PermisosDto, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Put",
+    "RelativePath": "Permisos",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "SIGOATS.api.Core.DTO.PermisosDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIGOATS.api.Infra.Common.GenericController\u00602[[SIGOATS.api.Core.Models.Permisos, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SIGOATS.api.Core.DTO.PermisosDto, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetByID",
+    "RelativePath": "Permisos/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIGOATS.api.Infra.Common.GenericController\u00602[[SIGOATS.api.Core.Models.Permisos, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SIGOATS.api.Core.DTO.PermisosDto, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "Permisos/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIGOATS.api.Infra.Common.GenericController\u00602[[SIGOATS.api.Core.Models.Roles, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SIGOATS.api.Core.DTO.RolesDto, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAll",
+    "RelativePath": "Roles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIGOATS.api.Infra.Common.GenericController\u00602[[SIGOATS.api.Core.Models.Roles, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SIGOATS.api.Core.DTO.RolesDto, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Post",
+    "RelativePath": "Roles",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "SIGOATS.api.Core.DTO.RolesDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIGOATS.api.Infra.Common.GenericController\u00602[[SIGOATS.api.Core.Models.Roles, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SIGOATS.api.Core.DTO.RolesDto, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Put",
+    "RelativePath": "Roles",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "SIGOATS.api.Core.DTO.RolesDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIGOATS.api.Infra.Common.GenericController\u00602[[SIGOATS.api.Core.Models.Roles, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SIGOATS.api.Core.DTO.RolesDto, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetByID",
+    "RelativePath": "Roles/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIGOATS.api.Infra.Common.GenericController\u00602[[SIGOATS.api.Core.Models.Roles, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SIGOATS.api.Core.DTO.RolesDto, SIGOATS.api.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "Roles/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

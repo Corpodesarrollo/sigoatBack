@@ -12,9 +12,6 @@ namespace SIGOATS.api.Infra.Common
             {
                 cfg.CreateMap<Permisos, PermisosDto>();
                 cfg.CreateMap<PermisosDto, Permisos>();
-
-                cfg.CreateMap<PermisosRoles, PermisosRolesDto>();
-                cfg.CreateMap<PermisosRolesDto, PermisosRoles>();
             });
 
             var mapper = new Mapper(config);

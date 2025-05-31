@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using SIGOATS.api.Core.Interfaces;
 using SIGOATS.api.Infra;
+using SIGOATS.api.Infra.Interfaces;
 using SIGOATS.api.Infra.Repositorios;
 
 
@@ -14,8 +14,10 @@ namespace SIGOATS.api.Api.Extensions
                 options.UseSqlServer(pBuilder.Configuration.GetConnectionString("APP_DBConnectionString")));
 
             pBuilder.Services.AddScoped<IAuthRepo, AuthRepo>();
+            pBuilder.Services.AddScoped<MenusRepo>();
+            pBuilder.Services.AddScoped<ModulosRepo>();
+            pBuilder.Services.AddScoped<RolesRepo>();
             pBuilder.Services.AddScoped<PermisosRepo>();
-            pBuilder.Services.AddScoped<PermisosRolesRepo>();
 
             return pBuilder;
         }

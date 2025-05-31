@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "ContainingType": "SIGOATS.api.Seguridad.Controllers.AuthController",
+    "Method": "Get",
+    "RelativePath": "Auth",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "SIGOATS.api.Core.DTO.UserDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

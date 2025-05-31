@@ -10,6 +10,8 @@ namespace SIGOATS.api.Infra
         }
 
         public DbSet<Permisos> Permisos { get; set; }
-        public DbSet<PermisosRoles> PermisosRoles { get; set; }
+        public DbSet<Menus> Menus { get; set; }
+        public DbSet<Modulos> Modulos { get; set; }
+        public DbSet<Roles> Roles { get; set; }
     }
 }

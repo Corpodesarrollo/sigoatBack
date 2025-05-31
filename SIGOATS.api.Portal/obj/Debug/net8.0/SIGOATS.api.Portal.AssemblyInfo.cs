@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SIGOATS.api.Portal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5dbbeefc988cb3ca1c5d19c3b68cfe9703cdae3a")]
 [assembly: System.Reflection.AssemblyProductAttribute("SIGOATS.api.Portal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SIGOATS.api.Portal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

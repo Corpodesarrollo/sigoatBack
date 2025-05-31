@@ -1,9 +1,14 @@
-﻿namespace SIGOATS.api.Core.Models
+﻿using SIGOATS.api.Core.Common;
+
+namespace SIGOATS.api.Core.Models
 {
-    public class Permisos
+    public class Permisos : BaseEntity
     {
-        public long Id { get; set; }
-        public string? Nombre { get; set; }
-        public string? Descripcion { get; set; }
+        public long IdRol { get; set; }
+        public long IdModulo { get; set; }
+        public bool Crear { get; set; }
+        public bool Consultar { get; set; }
+        public bool Editar { get; set; }
+        public bool Eliminar { get; set; }
     }
 }

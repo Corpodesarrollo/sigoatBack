@@ -14,12 +14,12 @@ namespace SIGOATS.api.Infra.Common
             return Enumerable.Empty<TDto>().AsQueryable();
         }
 
-        public virtual async Task<Response<List<TDto>, ResponseError>> GetAll()
+        public virtual async Task<Response<TDto[], ResponseError>> GetAll()
         {
             try
             {
                 var entities = await db.Set<TEntity>().ToListAsync();
-                var dtos = _mapper.Map<List<TDto>>(entities);
+                var dtos = _mapper.Map<TDto[]>(entities);
                 return new() { Data = dtos };
             }
             catch (Exception ex)

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SIGOATS.api.Core.DTO;
-using SIGOATS.api.Core.Interfaces;
+using SIGOATS.api.Infra.Interfaces;
 using SISPRO.TRV.Web.MVCCore;
 
 namespace SIGOATS.api.Seguridad.Controllers

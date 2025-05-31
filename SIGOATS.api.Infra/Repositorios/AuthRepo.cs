@@ -1,12 +1,10 @@
 ﻿using SIGOATS.api.Core.DTO;
-using SIGOATS.api.Core.Interfaces;
+using SIGOATS.api.Infra.Interfaces;
 using SISPRO.TRV.Entity;
 
 namespace SIGOATS.api.Infra.Repositorios
 {
-    public class AuthRepo(
-    //ApplicationDbContext db
-    ) : IAuthRepo
+    public class AuthRepo() : IAuthRepo
     {
         public async Task<UserDto?> GetUser(User data)
         {

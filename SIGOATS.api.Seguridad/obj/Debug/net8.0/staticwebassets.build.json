@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "iqvFH0kyZH448jffvkcp/hOSTM3E6UKrjQRvozbpVvA=",
+  "Hash": "C3PM/VaiC7+LJ2ubIjaP5KMYtX2ocCr/kCEf0frfvpA=",
   "Source": "SIGOATS.api.Seguridad",
   "BasePath": "_content/SIGOATS.api.Seguridad",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
