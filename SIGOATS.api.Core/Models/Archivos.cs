@@ -6,5 +6,6 @@ namespace SIGOATS.api.Core.Models
     {
         public string? Nombre { get; set; }
         public string? Extension { get; set; }
+        public string? MIMEType { get; set; }
     }
 }

@@ -9,6 +9,6 @@
         public string? CreatedByUserId { get; set; }
         public string? UpdatedByUserId { get; set; }
         public string? DeletedByUserId { get; set; }
-        public bool IsDeleted { get; set; }
+        public bool? IsDeleted { get; set; }
     }
 }

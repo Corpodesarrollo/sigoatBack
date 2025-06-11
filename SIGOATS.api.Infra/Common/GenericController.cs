@@ -11,35 +11,56 @@ namespace SIGOATS.api.Infra.Common
         public virtual async Task<IActionResult> GetAll()
         {
             var response = await service.GetAll();
-            return response.Result();
+            return Ok(response);
         }
 
         [HttpGet("{id}")]
         public virtual async Task<IActionResult> GetByID(int id)
         {
             var response = await service.GetByID(id);
-            return response.Result();
+            return Ok(response);
+        }
+
+        [HttpGet("OnDemand")]
+        public virtual async Task<IActionResult> OnDemand(int page, int pageSize, string? search)
+        {
+            try
+            {
+                var response = await service.OnDemandAsync(page, pageSize, service.GetSelectBase(search));
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpPost]
         public virtual async Task<IActionResult> Post(T2 data)
         {
             var response = await service.Create(data);
-            return response.Result();
+            return Ok(response);
         }
 
         [HttpPut]
         public virtual async Task<IActionResult> Put(T2 data)
         {
             var response = await service.Update(data);
-            return response.Result();
+            return Ok(response);
+        }
+
+        [HttpPut("ActivateToDeactivate/{id}")]
+        public virtual async Task<IActionResult> ActivateToDeactivate(long id)
+        {
+            var response = await service.ActivateToDeactivate(id);
+            return Ok(response);
         }
 
         [HttpDelete("{id}")]
-        public virtual async Task<IActionResult> Delete(int id)
+        public virtual async Task<IActionResult> Delete(long id)
         {
             var response = await service.Delete(id);
-            return response.Result();
+            return Ok(response);
         }
     }
 }

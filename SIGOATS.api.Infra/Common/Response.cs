@@ -9,18 +9,5 @@ namespace SIGOATS.api.Infra.Common
         public bool Error { get; set; }
 
         private E? dataError;
-
-        public IActionResult Result()
-        {
-            if (Data != null)
-            {
-                if (DataError != null)
-                    return BadRequest(DataError);
-                else
-                    return Ok(Data);
-            }
-            else
-                return BadRequest(DataError);
-        }
     }
 }

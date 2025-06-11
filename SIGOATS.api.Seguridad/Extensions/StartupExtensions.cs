@@ -11,7 +11,13 @@ namespace SIGOATS.api.Api.Extensions
         public static WebApplicationBuilder CustomConfigureServices(this WebApplicationBuilder pBuilder)
         {
             pBuilder.Services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(pBuilder.Configuration.GetConnectionString("APP_DBConnectionString")));
+                options.UseSqlServer(pBuilder.Configuration.GetConnectionString("APP_DBConnectionString"), sqlServerOptions =>
+                {
+                    sqlServerOptions.EnableRetryOnFailure(
+                        maxRetryCount: 3,
+                        maxRetryDelay: TimeSpan.FromSeconds(5),
+                        errorNumbersToAdd: null);
+                }));
 
             pBuilder.Services.AddScoped<IAuthRepo, AuthRepo>();
             pBuilder.Services.AddScoped<MenusRepo>();

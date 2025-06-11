@@ -8,6 +8,7 @@ namespace SIGOATS.api.Core.Models
         public string? Grupo { get; set; }
         public long? IdMenu { get; set; }
         public long? IdModulo { get; set; }
+        public int? Orden { get; set; }
         public bool Estado { get; set; }
     }
 }
