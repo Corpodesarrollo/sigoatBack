@@ -20,6 +20,9 @@ namespace SIGOATS.api.Infra.Common
                 cfg.CreateMap<Menus, MenusDto>();
                 cfg.CreateMap<MenusDto, Menus>();
 
+                cfg.CreateMap<MenusPortal, MenusPortalDto>();
+                cfg.CreateMap<MenusPortalDto, MenusPortal>();
+
                 cfg.CreateMap<Modulos, ModulosDto>();
                 cfg.CreateMap<ModulosDto, Modulos>();
 
@@ -57,6 +60,12 @@ namespace SIGOATS.api.Infra.Common
 
                 cfg.CreateMap<TiposRedesSociales, TiposRedesSocialesDto>();
                 cfg.CreateMap<TiposRedesSocialesDto, TiposRedesSociales>();
+
+                cfg.CreateMap<Tableros, TablerosDto>();
+                cfg.CreateMap<TablerosDto, Tableros>();
+
+                cfg.CreateMap<NotificacionesLeidas, NotificacionesLeidasDto>();
+                cfg.CreateMap<NotificacionesLeidasDto, NotificacionesLeidas>();
             });
 
             var mapper = new Mapper(config);

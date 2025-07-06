@@ -8,6 +8,7 @@ namespace SIGOATS.api.Core.Models
         public string? Nombre { get; set; }
         public long? IdPagina { get; set; }
         public long? IdArchivo { get; set; }
+        public int? Orden { get; set; }
         public bool Estado { get; set; }
     }
 }

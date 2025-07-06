@@ -6,7 +6,10 @@ namespace SIGOATS.api.Core.DTO
     {
         public string? Titulo { get; set; }
         public string? Contenido { get; set; }
-        public TipoEvento? TipoEvento { get; set; }
         public Audiencia? Audiencia { get; set; }
+        public DateTime? FechaInicio { get; set; }
+        public DateTime? FechaFin { get; set; }
+        public bool Estado { get; set; }
+        public bool Leido { get; set; }
     }
 }

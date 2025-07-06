@@ -10,6 +10,7 @@ namespace SIGOATS.api.Core.DTO
         public string? Menu { get; set; }
         public long? IdModulo { get; set; }
         public string? Modulo { get; set; }
+        public long? IdTablero { get; set; }
         public int? Orden { get; set; }
         public bool Estado { get; set; }
     }

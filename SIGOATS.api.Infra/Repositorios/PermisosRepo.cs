@@ -19,8 +19,13 @@ namespace SIGOATS.api.Infra.Repositorios
                                        join modulo in db.Modulos on menu.IdModulo equals modulo.Id into left
                                        from cl in left.DefaultIfEmpty()
 
+                                       join t in db.Tableros on menu.IdTablero equals t.Id into leftTablero
+                                       from tablero in leftTablero.DefaultIfEmpty()
+
                                        join permiso in db.Permisos on new { a = menu.Id, c = idPerfil } equals new { a = permiso.IdMenu, c = permiso.IdRol } into ps
                                        from l in ps.DefaultIfEmpty()
+
+                                       where menu.Estado == true && (l != null ? l.Consultar : false)
 
                                        select new PermisosPerfilDto
                                        {
@@ -32,6 +37,8 @@ namespace SIGOATS.api.Infra.Repositorios
                                            IdMenuPadre = menuPadre == null ? null : menuPadre.Id,
                                            NombreMenuPadre = menuPadre == null ? "" : menuPadre.Nombre,
                                            Grupo = menu.Grupo,
+                                           IdTablero = tablero != null ? tablero.Id : 0,
+                                           Tablero = tablero != null,
                                            Orden = menu.Orden,
                                            Crear = l != null ? l.Crear : false,
                                            Consultar = l != null ? l.Consultar : false,
@@ -86,6 +93,65 @@ namespace SIGOATS.api.Infra.Repositorios
                                        .ToArrayAsync();
 
                 return new() { Data = resultado };
+            }
+            catch (Exception ex)
+            {
+                return new() { DataError = ex.Message };
+            }
+        }
+
+        public async Task<Response<PermisosPerfilDto[], string>> Portal()
+        {
+            try
+            {
+                var lista = new List<PermisosPerfilDto>();
+                var resultado = await (from menu in db.MenusPortal
+
+                                       join menuP in db.MenusPortal on menu.IdMenu equals menuP.Id into leftMenu
+                                       from menuPadre in leftMenu.DefaultIfEmpty()
+
+                                       join pagina in db.Paginas on menu.IdModulo equals pagina.Id into left
+                                       from cl in left.DefaultIfEmpty()
+
+                                       where menu.Estado == true
+
+                                       select new PermisosPerfilDto
+                                       {
+                                           IdMenu = menu.Id,
+                                           NombreMenu = menu.Nombre,
+                                           Path = cl != null ? cl.Id.ToString() : "",
+                                           IdMenuPadre = menuPadre == null ? null : menuPadre.Id,
+                                           NombreMenuPadre = menuPadre == null ? "" : menuPadre.Nombre,
+                                           Orden = menu.Orden,
+                                       })
+                                       .OrderBy(x => x.Orden)
+                                       .ToListAsync();
+
+                lista.Add(
+                    new()
+                    {
+                        IdMenu = 0,
+                        NombreMenu = "Inicio",
+                        Path = "inicio",
+                        IdMenuPadre = null,
+                        NombreMenuPadre = "",
+                        Orden = 0
+                    });
+
+                lista.AddRange(resultado);
+
+                lista.Add(
+                    new()
+                    {
+                        IdMenu = 0,
+                        NombreMenu = "Contactenos",
+                        Path = "consulta-ciudadana",
+                        IdMenuPadre = null,
+                        NombreMenuPadre = "",
+                        Orden = 0
+                    });
+
+                return new() { Data = lista.ToArray() };
             }
             catch (Exception ex)
             {

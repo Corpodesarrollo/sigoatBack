@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using SIGOATS.api.Core.DTO;
 using SIGOATS.api.Infra.Interfaces;
 using SISPRO.TRV.Web.MVCCore;
@@ -7,7 +6,7 @@ using SISPRO.TRV.Web.MVCCore;
 namespace SIGOATS.api.Seguridad.Controllers
 {
     [Route("[controller]")]
-    [Authorize]
+    //[Authorize]
     [ApiController]
     public class AuthController(IAuthRepo repo) : Controller
     {

@@ -5,5 +5,7 @@ using SIGOATS.api.Infra.Repositorios;
 
 namespace SIGOATS.api.Seguridad.Controllers
 {
-    public class PaginasController(PaginasRepo repo) : GenericController<Paginas, PaginasDto>(repo) { }
+    public class PaginasController(PaginasRepo repo) : GenericController<Paginas, PaginasDto>(repo)
+    {
+    }
 }

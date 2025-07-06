@@ -8,8 +8,10 @@ namespace SIGOATS.api.Core.DTO
         public string? Nombre { get; set; }
         public long? IdPagina { get; set; }
         public long? IdArchivo { get; set; }
-        public string? Archivo { get; set; }
+        public ArchivoDto? Archivo { get; set; }
         public string? MIMEType { get; set; }
+        public string? Formato { get; set; }
+        public int? Orden { get; set; }
         public bool Estado { get; set; }
     }
 }

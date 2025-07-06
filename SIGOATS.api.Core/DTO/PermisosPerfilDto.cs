@@ -12,6 +12,8 @@
         public string? Path { get; set; }
         public string? Grupo { get; set; }
         public int? Orden { get; set; }
+        public long IdTablero { get; set; }
+        public bool Tablero { get; set; }
         public bool Crear { get; set; }
         public bool Consultar { get; set; }
         public bool Editar { get; set; }

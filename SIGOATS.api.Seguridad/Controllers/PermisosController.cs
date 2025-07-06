@@ -22,6 +22,13 @@ namespace SIGOATS.api.Seguridad.Controllers
             return Ok(response);
         }
 
+        [HttpGet("Portal")]
+        public async Task<IActionResult> Portal()
+        {
+            var response = await repo.Portal();
+            return Ok(response);
+        }
+
         [HttpPut("Active")]
         public async Task<IActionResult> Active(ActivarPermisoDto data)
         {

@@ -9,5 +9,6 @@ namespace SIGOATS.api.Core.Models
         public string? Contenido { get; set; }
         public string? Url { get; set; }
         public long? IdArchivo { get; set; } // Para imágenes y anexos
+        public int? Orden { get; set; }
     }
 }

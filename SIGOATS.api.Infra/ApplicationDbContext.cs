@@ -21,9 +21,12 @@ namespace SIGOATS.api.Infra
         public DbSet<Noticias> Noticias { get; set; }
         public DbSet<NoticiasDetalles> NoticiasDetalles { get; set; }
         public DbSet<Notificaciones> Notificaciones { get; set; }
+        public DbSet<NotificacionesLeidas> NotificacionesLeidas { get; set; }
         public DbSet<Paginas> Paginas { get; set; }
         public DbSet<RedesSociales> RedesSociales { get; set; }
         public DbSet<TiposRedesSociales> TiposRedesSociales { get; set; }
+        public DbSet<MenusPortal> MenusPortal { get; set; }
+        public DbSet<Tableros> Tableros { get; set; }
 
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SIGOATS.api.Core.DTO;
+using SIGOATS.api.Infra.Common;
 using SIGOATS.api.Infra.Interfaces;
 using SISPRO.TRV.Web.MVCCore;
 
@@ -14,13 +15,17 @@ namespace SIGOATS.api.Seguridad.Controllers
         [HttpGet]
         public async Task<ActionResult<UserDto>> Get()
         {
-            var user = this.GetUser();
-            var result = await repo.GetUser(user);
-
-            if (result == null)
-                return BadRequest();
-
-            return Ok(result);
+            var result = new Response<UserDto, ResponseError>();
+            try
+            {
+                var user = this.GetUser();
+                var response = await repo.GetUser(user);
+                return Ok(result.Data = response);
+            }
+            catch (Exception ex)
+            {
+                return Ok(result.DataError = new(ex.Message));
+            }
         }
     }
 }

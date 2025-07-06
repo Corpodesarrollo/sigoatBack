@@ -103,7 +103,7 @@ namespace SIGOATS.api.Infra.Repositorios
 
                 var fileBytes = await response.Content.ReadAsByteArrayAsync();
                 var fileName = Path.GetFileName(new Uri(imagen.Url).LocalPath);
-                var fileExtension = Path.GetExtension(fileName);
+                var fileExtension = "image/jpeg";
 
                 return new ArchivoDto
                 {
@@ -143,47 +143,38 @@ namespace SIGOATS.api.Infra.Repositorios
         {
             try
             {
-                // tipo = "up" or "down"
-                /*
-                 se debe cambiar el orden de la imagen con id = id, subiendo o bajando una posición y actulizar el orden de las demás imágenes
-                 */
-                var imagen = await db.Imagenes.FindAsync(id);
-                if (imagen == null)
-                    return new() { DataError = new ResponseError("Imagen no encontrada") };
+                var data = await db.Imagenes.FindAsync(id);
+                if (data == null)
+                    return new() { DataError = new ResponseError("Detalle no encontrado") };
 
-                var ordenActual = imagen.Orden;
-                var imagenes = await db.Imagenes.Where(m => m.IdPagina == imagen.IdPagina).OrderBy(m => m.Orden).ToListAsync();
+                var ordenActual = data.Orden;
 
                 if (tipo == "up")
                 {
                     // Subir
                     if (ordenActual > 1)
                     {
-                        var imagenAnterior = imagenes.FirstOrDefault(m => m.Orden == ordenActual - 1);
-                        if (imagenAnterior != null)
+                        var dataAnterior = await db.Imagenes.Where(m => m.IdPagina == data.IdPagina && m.Orden < ordenActual).OrderByDescending(m => m.Orden).FirstOrDefaultAsync();
+                        if (dataAnterior != null)
                         {
-                            imagen.Orden--;
-                            imagenAnterior.Orden++;
-                            db.Imagenes.Update(imagen);
-                            db.Imagenes.Update(imagenAnterior);
+                            data.Orden = dataAnterior.Orden;
+                            dataAnterior.Orden = ordenActual;
+                            db.Imagenes.Update(data);
+                            db.Imagenes.Update(dataAnterior);
                             await db.SaveChangesAsync();
                         }
                     }
                 }
                 else if (tipo == "down")
                 {
-                    // Bajar
-                    if (ordenActual < imagenes.Count)
+                    var dataSiguiente = await db.Imagenes.Where(m => m.IdPagina == data.IdPagina && m.Orden > ordenActual).OrderBy(m => m.Orden).FirstOrDefaultAsync();
+                    if (dataSiguiente != null)
                     {
-                        var imagenSiguiente = imagenes.FirstOrDefault(m => m.Orden == ordenActual + 1);
-                        if (imagenSiguiente != null)
-                        {
-                            imagen.Orden++;
-                            imagenSiguiente.Orden--;
-                            db.Imagenes.Update(imagen);
-                            db.Imagenes.Update(imagenSiguiente);
-                            await db.SaveChangesAsync();
-                        }
+                        data.Orden = dataSiguiente.Orden;
+                        dataSiguiente.Orden = ordenActual;
+                        db.Imagenes.Update(data);
+                        db.Imagenes.Update(dataSiguiente);
+                        await db.SaveChangesAsync();
                     }
                 }
                 else

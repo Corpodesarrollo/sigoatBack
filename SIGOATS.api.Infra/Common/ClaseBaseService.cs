@@ -128,7 +128,7 @@ namespace SIGOATS.api.Infra.Common
                 var take = pageSize > 0 ? pageSize : 10;
                 var skip = page > 0 ? (page - 1) * take : 0;
                 var Query = selectQuery;
-                var resultado = await Query.Take(take).Skip(skip).ToArrayAsync();
+                var resultado = await Query.Skip(skip).Take(take).ToArrayAsync();
 
                 var count = await Query.CountAsync();
 

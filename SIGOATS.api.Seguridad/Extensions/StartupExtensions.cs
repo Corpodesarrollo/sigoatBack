@@ -21,6 +21,7 @@ namespace SIGOATS.api.Api.Extensions
 
             pBuilder.Services.AddScoped<IAuthRepo, AuthRepo>();
             pBuilder.Services.AddScoped<MenusRepo>();
+            pBuilder.Services.AddScoped<MenusPortalRepo>();
             pBuilder.Services.AddScoped<ModulosRepo>();
             pBuilder.Services.AddScoped<RolesRepo>();
             pBuilder.Services.AddScoped<PermisosRepo>();

@@ -1,0 +1,13 @@
+﻿using SIGOATS.api.Core.Common;
+
+namespace SIGOATS.api.Core.Models
+{
+    public class MenusPortal : BaseEntity
+    {
+        public string? Nombre { get; set; }
+        public long? IdMenu { get; set; }
+        public long? IdModulo { get; set; }
+        public int? Orden { get; set; }
+        public bool? Estado { get; set; }
+    }
+}
