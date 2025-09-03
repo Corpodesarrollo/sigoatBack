@@ -4,6 +4,7 @@ namespace SIGOATS.api.Core.DTO
 {
     public class ContactenosDto : BaseDto
     {
+        public string? NombreCompleto { get; set; }
         public string? Email { get; set; }
         public string? Telefono { get; set; }
         public string? Asunto { get; set; }

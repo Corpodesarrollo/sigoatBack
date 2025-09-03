@@ -31,6 +31,8 @@ namespace SIGOATS.api.Api.Extensions
             pBuilder.Services.AddScoped<NotificacionesRepo>();
             pBuilder.Services.AddScoped<PaginasRepo>();
             pBuilder.Services.AddScoped<TablerosRepo>();
+            pBuilder.Services.AddScoped<RedesSocialesRepo>();
+            pBuilder.Services.AddScoped<ConfiguracionRepo>();
 
             return pBuilder;
         }

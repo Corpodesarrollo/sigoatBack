@@ -4,6 +4,6 @@
     {
         Actualizacion,
         Mantenimiento,
-        Evento
+        Novedad
     }
 }

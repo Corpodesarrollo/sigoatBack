@@ -4,6 +4,7 @@ namespace SIGOATS.api.Core.Models
 {
     public class Contactenos : BaseEntity
     {
+        public string? NombreCompleto { get; set; }
         public string? Email { get; set; }
         public string? Telefono { get; set; }
         public string? Asunto { get; set; }

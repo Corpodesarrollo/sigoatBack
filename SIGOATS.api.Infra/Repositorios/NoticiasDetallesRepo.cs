@@ -112,7 +112,7 @@ namespace SIGOATS.api.Infra.Repositorios
 
                 var fileBytes = await response.Content.ReadAsByteArrayAsync();
                 var fileName = Path.GetFileName(new Uri(detalle.Url).LocalPath);
-                var fileExtension = Path.GetExtension(fileName);
+                var fileExtension = "image/jpeg";
 
                 return new ArchivoDto
                 {

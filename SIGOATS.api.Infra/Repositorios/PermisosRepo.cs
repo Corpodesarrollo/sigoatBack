@@ -25,7 +25,7 @@ namespace SIGOATS.api.Infra.Repositorios
                                        join permiso in db.Permisos on new { a = menu.Id, c = idPerfil } equals new { a = permiso.IdMenu, c = permiso.IdRol } into ps
                                        from l in ps.DefaultIfEmpty()
 
-                                       where menu.Estado == true && (l != null ? l.Consultar : false)
+                                       where menu.Estado && (l != null ? l.Consultar : false) && (tablero != null ? tablero.Estado : true)
 
                                        select new PermisosPerfilDto
                                        {
@@ -44,6 +44,7 @@ namespace SIGOATS.api.Infra.Repositorios
                                            Consultar = l != null ? l.Consultar : false,
                                            Editar = l != null ? l.Editar : false,
                                            Eliminar = l != null ? l.Eliminar : false,
+
                                        })
                                        .OrderBy(x => x.Grupo)
                                        .ThenBy(x => x.Orden)
@@ -119,7 +120,7 @@ namespace SIGOATS.api.Infra.Repositorios
                                        {
                                            IdMenu = menu.Id,
                                            NombreMenu = menu.Nombre,
-                                           Path = cl != null ? cl.Id.ToString() : "",
+                                           Path = cl != null ? "portal/" + cl.Id.ToString() : "",
                                            IdMenuPadre = menuPadre == null ? null : menuPadre.Id,
                                            NombreMenuPadre = menuPadre == null ? "" : menuPadre.Nombre,
                                            Orden = menu.Orden,
@@ -132,7 +133,7 @@ namespace SIGOATS.api.Infra.Repositorios
                     {
                         IdMenu = 0,
                         NombreMenu = "Inicio",
-                        Path = "inicio",
+                        Path = "portal",
                         IdMenuPadre = null,
                         NombreMenuPadre = "",
                         Orden = 0

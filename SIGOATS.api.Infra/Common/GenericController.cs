@@ -14,6 +14,13 @@ namespace SIGOATS.api.Infra.Common
             return Ok(response);
         }
 
+        [HttpGet("first")]
+        public async Task<IActionResult> GetFirst()
+        {
+            var response = await service.GetFirst();
+            return Ok(response);
+        }
+
         [HttpGet("{id}")]
         public virtual async Task<IActionResult> GetByID(int id)
         {
@@ -24,15 +31,8 @@ namespace SIGOATS.api.Infra.Common
         [HttpGet("OnDemand")]
         public virtual async Task<IActionResult> OnDemand(int page, int pageSize, string? search)
         {
-            try
-            {
-                var response = await service.OnDemandAsync(page, pageSize, service.GetSelectBase(search));
-                return Ok(response);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var response = await service.OnDemandAsync(page, pageSize, service.GetSelectBase(search));
+            return Ok(response);
         }
 
         [HttpPost]

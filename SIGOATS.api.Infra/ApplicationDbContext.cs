@@ -9,6 +9,7 @@ namespace SIGOATS.api.Infra
         {
         }
 
+        public DbSet<Configuracion> Configuracion { get; set; }
         public DbSet<Permisos> Permisos { get; set; }
         public DbSet<Menus> Menus { get; set; }
         public DbSet<Modulos> Modulos { get; set; }

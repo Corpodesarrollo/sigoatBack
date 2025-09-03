@@ -17,7 +17,8 @@ namespace SIGOATS.api.Infra.Repositorios
                                 Email = m.Email,
                                 Telefono = m.Telefono,
                                 Asunto = m.Asunto,
-                                Mensaje = m.Mensaje
+                                Mensaje = m.Mensaje,
+                                NombreCompleto = m.NombreCompleto
                             };
 
                 if (!string.IsNullOrEmpty(search))

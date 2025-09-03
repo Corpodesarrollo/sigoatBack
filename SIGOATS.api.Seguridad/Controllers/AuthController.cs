@@ -27,5 +27,21 @@ namespace SIGOATS.api.Seguridad.Controllers
                 return Ok(result.DataError = new(ex.Message));
             }
         }
+
+        [HttpGet("Prueba")]
+        public async Task<ActionResult<UserDto>> Prueba()
+        {
+            var result = new Response<UserDto, ResponseError>();
+            try
+            {
+                var user = this.GetUser();
+                var response = await repo.GetUser(user);
+                return Ok(result.Data = response);
+            }
+            catch (Exception ex)
+            {
+                return Ok(result.DataError = new(ex.Message));
+            }
+        }
     }
 }

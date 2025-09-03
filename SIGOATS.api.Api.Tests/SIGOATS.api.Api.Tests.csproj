@@ -24,7 +24,7 @@
     <PackageReference Include="MSTest.TestFramework" Version="3.6.1" />
     <PackageReference Include="SISPRO.TRV.Entity" Version="1.0.0.325" />
     <PackageReference Include="SISPRO.TRV.General" Version="1.0.0.299" />
-    <PackageReference Include="SISPRO.TRV.Web.MVCCore" Version="1.0.0.1384" />
+    <PackageReference Include="SISPRO.TRV.Web.MVCCore" Version="1.0.0.1374" />
   </ItemGroup>
 
   <ItemGroup>

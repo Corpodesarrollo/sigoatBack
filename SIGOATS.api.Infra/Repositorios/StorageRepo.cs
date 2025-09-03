@@ -25,6 +25,7 @@ namespace SIGOATS.api.Infra.Repositorios
         {
             try
             {
+                await _containerClient.CreateIfNotExistsAsync();
                 BlobClient blobClient = _containerClient.GetBlobClient(fileName);
 
                 using var stream = new MemoryStream(fileBytes);

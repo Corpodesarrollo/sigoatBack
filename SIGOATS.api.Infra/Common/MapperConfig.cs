@@ -11,11 +11,18 @@ namespace SIGOATS.api.Infra.Common
         {
             var config = new MapperConfiguration(cfg =>
             {
+                cfg.CreateMap<Configuracion, ConfiguracionDto>();
+                cfg.CreateMap<ConfiguracionDto, Configuracion>();
+
                 cfg.CreateMap<Permisos, PermisosDto>();
                 cfg.CreateMap<PermisosDto, Permisos>();
 
-                cfg.CreateMap<Notificaciones, NotificacionesDto>();
-                cfg.CreateMap<NotificacionesDto, Notificaciones>();
+                cfg.CreateMap<Notificaciones, NotificacionesDto>()
+                    .ForMember(dest => dest.TipoEvento, opt => opt.MapFrom(src => (TipoEvento?)src.TipoEvento))
+                    .ForMember(dest => dest.Audiencia, opt => opt.MapFrom(src => (Audiencia?)src.Audiencia));
+                cfg.CreateMap<NotificacionesDto, Notificaciones>()
+                    .ForMember(dest => dest.TipoEvento, opt => opt.MapFrom(src => (int?)src.TipoEvento))
+                    .ForMember(dest => dest.Audiencia, opt => opt.MapFrom(src => (int?)src.Audiencia));
 
                 cfg.CreateMap<Menus, MenusDto>();
                 cfg.CreateMap<MenusDto, Menus>();

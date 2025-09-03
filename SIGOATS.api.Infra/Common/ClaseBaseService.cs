@@ -28,6 +28,20 @@ namespace SIGOATS.api.Infra.Common
             }
         }
 
+        public virtual async Task<Response<TDto, ResponseError>> GetFirst()
+        {
+            try
+            {
+                var entity = await db.Set<TEntity>().FirstOrDefaultAsync();
+                var dto = _mapper.Map<TDto>(entity);
+                return new() { Data = dto };
+            }
+            catch (Exception ex)
+            {
+                return new() { DataError = ProcessException(ex) };
+            }
+        }
+
         public virtual async Task<Response<TDto, ResponseError>> GetByID(long id)
         {
             try

@@ -17,7 +17,8 @@ namespace SIGOATS.api.Infra.Repositorios
                                 Titulo = m.Titulo,
                                 Detalle = m.Detalle,
                                 Idioma = m.Idioma,
-                                Estado = m.Estado
+                                Estado = m.Estado,
+                                Url = m.Url,
                             };
 
                 if (!string.IsNullOrEmpty(search))
