@@ -1,9 +1,11 @@
 #region Librerias
 
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using SIGOATS.api.Api.Extensions;
 using SISPRO.TRV.General;
-using SISPRO.TRV.Web.MVCCore.StartupExtensions;
 using SISPRO.TRV.Web.MVCCore.Helpers;
+using SISPRO.TRV.Web.MVCCore.StartupExtensions;
+using System.Text.Json;
 
 #endregion
 
@@ -11,14 +13,14 @@ using SISPRO.TRV.Web.MVCCore.Helpers;
 WebApplicationBuilder builder = WebApplicationHelper.CreateCustomBuilder<Program>(args);
 
 
-ReadConfig.FixLoadAppSettings (builder.Configuration);
+ReadConfig.FixLoadAppSettings(builder.Configuration);
 
 builder.Services.AddCustomConfigureServicesPreviousMvc();
 builder
-	.Services
-	.AddCustomMvcControllers()
+    .Services
+    .AddCustomMvcControllers()
     .AddJsonOptions();
-	//.AddFluentValidation<ValidarSolicitante_RequestValidator>();
+//.AddFluentValidation<ValidarSolicitante_RequestValidator>();
 
 builder.Services.AddCustomSwagger();
 
@@ -32,6 +34,18 @@ builder.CustomConfigureServices();
 
 WebApplication app = builder.Build();
 
+app.UseHealthChecks("/health", new HealthCheckOptions
+{
+    ResponseWriter = async (context, report) =>
+    {
+        context.Response.ContentType = "application/json";
+        var result = JsonSerializer.Serialize(new
+        {
+            status = "El servicio esta disponible"
+        });
+        await context.Response.WriteAsync(result);
+    }
+});
 
 app.UseCustomConfigure();
 app.UseCustomSwagger();

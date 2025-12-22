@@ -10,8 +10,16 @@ namespace SIGOATS.api.Api.Extensions
     {
         public static WebApplicationBuilder CustomConfigureServices(this WebApplicationBuilder pBuilder)
         {
+            // Cargar configuración desde varios orígenes
+            pBuilder.Configuration
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .AddJsonFile($"appsettings.{pBuilder.Environment.EnvironmentName}.json", optional: true)
+                .AddEnvironmentVariables()
+                .AddUserSecrets<Program>(optional: true);
+
             pBuilder.Services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(pBuilder.Configuration.GetConnectionString("APP_DBConnectionString"), sqlServerOptions =>
+                options.UseSqlServer(pBuilder.Configuration.GetConnectionString("DefaultConnection"), sqlServerOptions =>
                 {
                     sqlServerOptions.EnableRetryOnFailure(
                         maxRetryCount: 3,

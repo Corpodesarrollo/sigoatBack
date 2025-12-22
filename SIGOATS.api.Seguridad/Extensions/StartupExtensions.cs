@@ -11,7 +11,7 @@ namespace SIGOATS.api.Api.Extensions
         public static WebApplicationBuilder CustomConfigureServices(this WebApplicationBuilder pBuilder)
         {
             pBuilder.Services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(pBuilder.Configuration.GetConnectionString("APP_DBConnectionString"), sqlServerOptions =>
+                options.UseSqlServer(pBuilder.Configuration.GetConnectionString("DefaultConnection"), sqlServerOptions =>
                 {
                     sqlServerOptions.EnableRetryOnFailure(
                         maxRetryCount: 3,
@@ -24,6 +24,7 @@ namespace SIGOATS.api.Api.Extensions
             pBuilder.Services.AddScoped<MenusPortalRepo>();
             pBuilder.Services.AddScoped<ModulosRepo>();
             pBuilder.Services.AddScoped<RolesRepo>();
+            pBuilder.Services.AddScoped<UsersRepo>();
             pBuilder.Services.AddScoped<PermisosRepo>();
 
             return pBuilder;

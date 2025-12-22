@@ -1,25 +1,34 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SIGOATS.api.Core.DTO;
+using SIGOATS.api.Infra.Common;
 using SIGOATS.api.Infra.Interfaces;
 using SISPRO.TRV.Web.MVCCore;
 
-namespace SIGOATS.api.Seguridad.Controllers
+namespace SIGOATS.api.Administracion.Controllers
 {
     [Route("[controller]")]
-    //[Authorize]
+    [Authorize]
     [ApiController]
     public class AuthController(IAuthRepo repo) : Controller
     {
         [HttpGet]
         public async Task<ActionResult<UserDto>> Get()
         {
-            var user = this.GetUser();
-            var result = await repo.GetUser(user);
+            var result = new Response<UserDto, ResponseError>();
+            try
+            {
+                var user = this.GetUser();
+                var response = await repo.GetUser(user);
+                if (response == null)
+                    return BadRequest();
 
-            if (result == null)
-                return BadRequest();
-
-            return Ok(result);
+                return Ok(result.Data = response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(result.DataError = new(ex.Message));
+            }
         }
     }
 }

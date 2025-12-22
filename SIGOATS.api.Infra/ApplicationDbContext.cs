@@ -14,6 +14,7 @@ namespace SIGOATS.api.Infra
         public DbSet<Menus> Menus { get; set; }
         public DbSet<Modulos> Modulos { get; set; }
         public DbSet<Roles> Roles { get; set; }
+        public DbSet<Usuarios> Usuarios { get; set; }
         public DbSet<Anexos> Anexos { get; set; }
         public DbSet<Archivos> Archivos { get; set; }
         public DbSet<Contactenos> Contactenos { get; set; }

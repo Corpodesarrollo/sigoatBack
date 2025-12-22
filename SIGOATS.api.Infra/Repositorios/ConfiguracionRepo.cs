@@ -13,8 +13,6 @@ namespace SIGOATS.api.Infra.Repositorios
             try
             {
                 var query = from m in db.Configuracion
-                            join a1 in db.Archivos on m.IdLogoGovCo equals a1.Id into a1Group
-                            from a1 in a1Group.DefaultIfEmpty()
 
                             join a2 in db.Archivos on m.IdLogoIzquierdo equals a2.Id into a2Group
                             from a2 in a2Group.DefaultIfEmpty()
@@ -28,8 +26,6 @@ namespace SIGOATS.api.Infra.Repositorios
                                 RedesSociales = m.RedesSociales,
                                 ColorGovCo = m.ColorGovCo,
                                 ColorPrincipal = m.ColorPrincipal,
-                                IdLogoGovCo = m.IdLogoGovCo,
-                                LogoGovCo = a1 != null ? new ArchivoDto { FileName = a1.Nombre } : null,
                                 IdLogoIzquierdo = m.IdLogoIzquierdo,
                                 LogoIzquierdo = a2 != null ? new ArchivoDto { FileName = a2.Nombre } : null,
                                 IdLogoDerecho = m.IdLogoDerecho,
@@ -62,21 +58,6 @@ namespace SIGOATS.api.Infra.Repositorios
         {
             try
             {
-                Archivos? archivo1 = null;
-                if (data.LogoGovCo != null || data.LogoGovCo?.File != null)
-                {
-                    archivo1 = new Archivos
-                    {
-                        Nombre = Guid.NewGuid().ToString(),
-                        MIMEType = data?.LogoGovCo?.FileExtension,
-                        Extension = Path.GetExtension(data?.LogoGovCo?.FileName)
-                    };
-                    await db.Archivos.AddAsync(archivo1);
-                    await db.SaveChangesAsync();
-
-                    var resulStorage = await storageRepo.UploadFileAsync(data.LogoGovCo.File, archivo1.Nombre, true);
-                }
-
                 Archivos? archivo2 = null;
                 if (data.LogoIzquierdo != null || data.LogoIzquierdo?.File != null)
                 {
@@ -110,7 +91,6 @@ namespace SIGOATS.api.Infra.Repositorios
                     RedesSociales = data.RedesSociales,
                     ColorGovCo = data.ColorGovCo,
                     ColorPrincipal = data.ColorPrincipal,
-                    IdLogoGovCo = archivo1 != null ? archivo1.Id : 0,
                     IdLogoIzquierdo = archivo2 != null ? archivo2.Id : 0,
                     IdLogoDerecho = archivo3 != null ? archivo3.Id : 0
                 };
@@ -130,33 +110,6 @@ namespace SIGOATS.api.Infra.Repositorios
         {
             try
             {
-                Archivos? archivo1 = null;
-                if (data.LogoGovCo != null || data.LogoGovCo?.File != null)
-                {
-                    archivo1 = await db.Archivos.FindAsync(data.IdLogoGovCo);
-                    if (archivo1 != null)
-                    {
-                        archivo1.MIMEType = data?.LogoGovCo?.FileExtension;
-                        archivo1.Extension = Path.GetExtension(data?.LogoGovCo?.FileName);
-                        db.Archivos.Update(archivo1);
-                        await db.SaveChangesAsync();
-
-                        var resulStorage = await storageRepo.UploadFileAsync(data.LogoGovCo.File, archivo1.Nombre, true);
-                    }
-                    else
-                    {
-                        archivo1 = new Archivos
-                        {
-                            Nombre = Guid.NewGuid().ToString(),
-                            MIMEType = data?.LogoGovCo?.FileExtension,
-                            Extension = Path.GetExtension(data?.LogoGovCo?.FileName)
-                        };
-                        await db.Archivos.AddAsync(archivo1);
-                        await db.SaveChangesAsync();
-                        var resulStorage = await storageRepo.UploadFileAsync(data.LogoGovCo.File, archivo1.Nombre, true);
-                    }
-                }
-
                 Archivos? archivo2 = null;
                 if (data.LogoIzquierdo != null || data.LogoIzquierdo?.File != null)
                 {
@@ -204,7 +157,6 @@ namespace SIGOATS.api.Infra.Repositorios
                 existingItem.RedesSociales = data.RedesSociales;
                 existingItem.ColorGovCo = data.ColorGovCo;
                 existingItem.ColorPrincipal = data.ColorPrincipal;
-                existingItem.IdLogoGovCo = data.IdLogoGovCo;
                 existingItem.IdLogoIzquierdo = data.IdLogoIzquierdo;
                 existingItem.IdLogoDerecho = data.IdLogoDerecho;
 

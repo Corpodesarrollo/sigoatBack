@@ -123,8 +123,13 @@ namespace SIGOATS.api.Infra.Repositorios
                     return new() { DataError = new("Noticia no encontrada") };
 
                 var detalles = await (from dn in db.NoticiasDetalles
+
                                       join a in db.Archivos on dn.IdArchivo equals a.Id into archivoGroup
                                       from a in archivoGroup.DefaultIfEmpty()
+
+                                      join t in db.Tableros on dn.IdTablero equals t.Id into tableroGroup
+                                      from t in tableroGroup.DefaultIfEmpty()
+
                                       where dn.IdNoticia == noticia.IdNoticia
                                       orderby dn.Orden
                                       select new NoticiasDetallesDto
@@ -133,7 +138,8 @@ namespace SIGOATS.api.Infra.Repositorios
                                           Tipo = (TipoItem)dn.Tipo,
                                           IdNoticia = dn.IdNoticia,
                                           Contenido = dn.Contenido,
-                                          Url = dn.Url,
+                                          IdTablero = dn.IdTablero,
+                                          Url = t == null ? dn.Url : t.Url,
                                           IdArchivo = dn.IdArchivo,
                                           MIMEType = a != null ? a.MIMEType : "",
                                           Orden = dn.Orden

@@ -80,6 +80,7 @@ namespace SIGOATS.api.Infra.Repositorios
                     IdNoticia = data.IdNoticia,
                     IdArchivo = archivo != null ? archivo.Id : null,
                     Contenido = data.Contenido,
+                    IdTablero = data.IdTablero,
                     Tipo = (int)data.Tipo,
                     Url = data.Url,
                     Orden = last == null ? 1 : last + 1

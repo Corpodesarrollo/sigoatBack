@@ -1,15 +1,14 @@
-using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 
 
 namespace SIGOATS.api.Api.Extensions
 {
-	internal static class StartupExtensions
-	{
+    internal static class StartupExtensions
+    {
         public static WebApplicationBuilder CustomConfigureServices(this WebApplicationBuilder pBuilder)
         {
             pBuilder.Services.AddDbContext<DbContext>(options =>
-                options.UseSqlServer(pBuilder.Configuration.GetConnectionString("DBConnectionString")));
+                options.UseSqlServer(pBuilder.Configuration.GetConnectionString("DefaultConnection")));
 
             //pBuilder.Services.AddScoped<IXXX, XXXRepo>();
 

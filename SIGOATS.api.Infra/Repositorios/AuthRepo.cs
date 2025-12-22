@@ -1,24 +1,26 @@
-﻿using SIGOATS.api.Core.DTO;
+﻿using Microsoft.EntityFrameworkCore;
+using SIGOATS.api.Core.DTO;
 using SIGOATS.api.Infra.Interfaces;
 using SISPRO.TRV.Entity;
 
 namespace SIGOATS.api.Infra.Repositorios
 {
-    public class AuthRepo() : IAuthRepo
+    public class AuthRepo(ApplicationDbContext db) : IAuthRepo
     {
         public async Task<UserDto?> GetUser(User data)
         {
-            //var user = await db.ApplicationUser.FirstOrDefaultAsync(x => x.Alias == data.Alias);
-            //if (user == null)
-            //    return null;
+            var user = await db.Usuarios.FirstOrDefaultAsync(x => x.Alias == data.Alias && x.Estado);
+            if (user == null)
+                return null;
 
             return new UserDto
             {
-                //Id = user.Id,
+                Id = user.Id,
+                RolId = user.RolId,
                 Alias = data.Alias,
                 Email = data.Email,
                 Name = data.calFullName,
-                State = true,
+                Estado = true,
                 RolCode = data.UserGroups.Select(x => x.Code).ToArray(),
                 EnterpriseCode = data.Enterprise.Code,
                 EnterpriseDeptoCode = data.Enterprise.DeptoCode,

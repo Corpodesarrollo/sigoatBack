@@ -73,6 +73,9 @@ namespace SIGOATS.api.Infra.Common
 
                 cfg.CreateMap<NotificacionesLeidas, NotificacionesLeidasDto>();
                 cfg.CreateMap<NotificacionesLeidasDto, NotificacionesLeidas>();
+
+                cfg.CreateMap<Usuarios, UserDto>();
+                cfg.CreateMap<UserDto, Usuarios>();
             });
 
             var mapper = new Mapper(config);

@@ -5,8 +5,6 @@ namespace SIGOATS.api.Core.DTO
     public class ConfiguracionDto : BaseDto
     {
         public bool RedesSociales { get; set; }
-        public long? IdLogoGovCo { get; set; }
-        public ArchivoDto? LogoGovCo { get; set; }
         public string? ColorGovCo { get; set; }
         public string? ColorPrincipal { get; set; }
         public long? IdLogoIzquierdo { get; set; }

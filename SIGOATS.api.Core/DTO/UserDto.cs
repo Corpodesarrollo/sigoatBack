@@ -1,12 +1,14 @@
-﻿namespace SIGOATS.api.Core.DTO
+﻿using SIGOATS.api.Core.Common;
+
+namespace SIGOATS.api.Core.DTO
 {
-    public class UserDto
+    public class UserDto : BaseDto
     {
-        public string? Id { get; set; }
+        public long? RolId { get; set; }
         public string? Alias { get; set; }
         public string? Email { get; set; }
         public string? Name { get; set; }
-        public bool State { get; set; }
+        public bool Estado { get; set; }
         public string[]? RolCode { get; set; }
         public string? EnterpriseCode { get; set; }
         public string? EnterpriseDeptoCode { get; set; }

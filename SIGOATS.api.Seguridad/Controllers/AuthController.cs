@@ -20,11 +20,14 @@ namespace SIGOATS.api.Seguridad.Controllers
             {
                 var user = this.GetUser();
                 var response = await repo.GetUser(user);
+                if (response == null)
+                    return BadRequest();
+
                 return Ok(result.Data = response);
             }
             catch (Exception ex)
             {
-                return Ok(result.DataError = new(ex.Message));
+                return BadRequest(result.DataError = new(ex.Message));
             }
         }
 
