@@ -29,6 +29,6 @@ namespace SIGOATS.api.Infra
         public DbSet<TiposRedesSociales> TiposRedesSociales { get; set; }
         public DbSet<MenusPortal> MenusPortal { get; set; }
         public DbSet<Tableros> Tableros { get; set; }
-
+        public DbSet<EnlacesInteres> EnlacesInteres { get; set; }
     }
 }

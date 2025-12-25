@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SIGOATS.api.Infra;
 
@@ -11,9 +12,11 @@ using SIGOATS.api.Infra;
 namespace SIGOATS.api.Infra.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251223091522_enlaces")]
+    partial class enlaces
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -532,7 +535,7 @@ namespace SIGOATS.api.Infra.Migrations
                     b.Property<string>("DeletedByUserId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Enlace")
+                    b.Property<string>("Detalle")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Estado")
@@ -541,34 +544,16 @@ namespace SIGOATS.api.Infra.Migrations
                     b.Property<DateTime?>("Fecha")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("IdImagen")
-                        .HasColumnType("bigint");
-
                     b.Property<long?>("IdPagina")
                         .HasColumnType("bigint");
 
                     b.Property<bool?>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<int?>("Orden")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("Posicion")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Resumen")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Target")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Titulo")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UpdatedByUserId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UrlRecurso")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

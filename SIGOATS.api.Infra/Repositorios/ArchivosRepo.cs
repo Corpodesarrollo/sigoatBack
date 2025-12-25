@@ -1,10 +1,11 @@
 ﻿using SIGOATS.api.Core.DTO;
 using SIGOATS.api.Core.Models;
 using SIGOATS.api.Infra.Common;
+using SIGOATS.api.Infra.Interfaces;
 
 namespace SIGOATS.api.Infra.Repositorios
 {
-    public class ArchivosRepo(ApplicationDbContext db) : ClaseBaseService<Archivos, ArchivosDto>(db)
+    public class ArchivosRepo(ApplicationDbContext db, IStorageRepo storageRepo) : ClaseBaseService<Archivos, ArchivosDto>(db)
     {
         public override IQueryable<ArchivosDto> GetSelectBase(string? search)
         {
@@ -27,6 +28,28 @@ namespace SIGOATS.api.Infra.Repositorios
             catch (Exception ex)
             {
                 throw new Exception($"Error in {nameof(ModulosDto)}.{nameof(GetSelectBase)}: {ex.Message}", ex);
+            }
+        }
+
+        public async Task<ArchivoDto> GetImg(long id)
+        {
+            try
+            {
+                var archivo = await db.Archivos.FindAsync(id);
+                if (archivo == null)
+                    throw new Exception("Archivo no encontrado");
+
+                var fileData = await storageRepo.DownloadFileAsync(archivo.Nombre);
+                return new ArchivoDto
+                {
+                    FileName = archivo.Nombre,
+                    FileExtension = archivo.MIMEType,
+                    File = fileData
+                };
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error in {nameof(ArchivosDto)}.{nameof(GetImg)}: {ex.Message}", ex);
             }
         }
     }

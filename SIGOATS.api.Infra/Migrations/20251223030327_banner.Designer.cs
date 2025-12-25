@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SIGOATS.api.Infra;
 
@@ -11,9 +12,11 @@ using SIGOATS.api.Infra;
 namespace SIGOATS.api.Infra.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251223030327_banner")]
+    partial class banner
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -215,58 +218,6 @@ namespace SIGOATS.api.Infra.Migrations
                     b.ToTable("Contactenos");
                 });
 
-            modelBuilder.Entity("SIGOATS.api.Core.Models.EnlacesInteres", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
-
-                    b.Property<string>("CreatedByUserId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("DateCreated")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DateDeleted")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DateUpdated")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("DeletedByUserId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Descripcion")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Estado")
-                        .HasColumnType("bit");
-
-                    b.Property<bool?>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<int?>("Orden")
-                        .HasColumnType("int");
-
-                    b.Property<string>("TipoApertura")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Titulo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UpdatedByUserId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Url")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("EnlacesInteres");
-                });
-
             modelBuilder.Entity("SIGOATS.api.Core.Models.Extenciones", b =>
                 {
                     b.Property<long>("Id")
@@ -350,9 +301,6 @@ namespace SIGOATS.api.Infra.Migrations
 
                     b.Property<string>("Texto")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("TipoContenido")
-                        .HasColumnType("int");
 
                     b.Property<string>("UpdatedByUserId")
                         .HasColumnType("nvarchar(max)");
@@ -532,7 +480,7 @@ namespace SIGOATS.api.Infra.Migrations
                     b.Property<string>("DeletedByUserId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Enlace")
+                    b.Property<string>("Detalle")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Estado")
@@ -541,34 +489,16 @@ namespace SIGOATS.api.Infra.Migrations
                     b.Property<DateTime?>("Fecha")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("IdImagen")
-                        .HasColumnType("bigint");
-
                     b.Property<long?>("IdPagina")
                         .HasColumnType("bigint");
 
                     b.Property<bool?>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<int?>("Orden")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("Posicion")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Resumen")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Target")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Titulo")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UpdatedByUserId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UrlRecurso")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

@@ -50,5 +50,19 @@ namespace SIGOATS.api.Seguridad.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpPut("UpDown/{id}/{tipo}")]
+        public async Task<IActionResult> UpDown(long id, string tipo)
+        {
+            try
+            {
+                var response = await repo.UpDown(id, tipo);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

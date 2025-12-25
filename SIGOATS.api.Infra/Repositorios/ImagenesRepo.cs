@@ -22,7 +22,10 @@ namespace SIGOATS.api.Infra.Repositorios
                                 MIMEType = a != null ? a.MIMEType : null,
                                 IdPagina = m.IdPagina,
                                 Orden = m.Orden,
-                                Url = m.Url
+                                Url = m.Url,
+                                Texto = m.Texto,
+                                TipoContenido = m.TipoContenido,
+                                Estado = m.Estado
                             };
 
                 return query.OrderBy(m => m.Orden).AsQueryable();
@@ -71,9 +74,11 @@ namespace SIGOATS.api.Infra.Repositorios
                 var newImage = new Imagenes
                 {
                     IdPagina = data.IdPagina,
-                    IdArchivo = archivo != null ? archivo.Id : null,
+                    IdArchivo = archivo?.Id,
                     Url = data.Url,
-                    Orden = lastImage == null ? 1 : lastImage + 1
+                    Texto = data.Texto,
+                    Orden = lastImage == null ? 1 : lastImage + 1,
+                    Estado = true
                 };
                 await db.Imagenes.AddAsync(newImage);
                 await db.SaveChangesAsync();
