@@ -30,5 +30,8 @@ namespace SIGOATS.api.Infra
         public DbSet<MenusPortal> MenusPortal { get; set; }
         public DbSet<Tableros> Tableros { get; set; }
         public DbSet<EnlacesInteres> EnlacesInteres { get; set; }
+        public DbSet<FooterInformacionInstitucional> FooterInformacionInstitucional { get; set; }
+        public DbSet<FooterNormatividad> FooterNormatividad { get; set; }
+        public DbSet<FooterFaq> FooterFaq { get; set; }
     }
 }

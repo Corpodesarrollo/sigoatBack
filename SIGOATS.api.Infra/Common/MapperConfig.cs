@@ -76,6 +76,18 @@ namespace SIGOATS.api.Infra.Common
 
                 cfg.CreateMap<Usuarios, UserDto>();
                 cfg.CreateMap<UserDto, Usuarios>();
+
+                cfg.CreateMap<EnlacesInteres, EnlacesInteresDto>();
+                cfg.CreateMap<EnlacesInteresDto, EnlacesInteres>();
+
+                cfg.CreateMap<FooterInformacionInstitucional, FooterInformacionInstitucionalDto>();
+                cfg.CreateMap<FooterInformacionInstitucionalDto, FooterInformacionInstitucional>();
+
+                cfg.CreateMap<FooterNormatividad, FooterNormatividadDto>();
+                cfg.CreateMap<FooterNormatividadDto, FooterNormatividad>();
+
+                cfg.CreateMap<FooterFaq, FooterFaqDto>();
+                cfg.CreateMap<FooterFaqDto, FooterFaq>();
             });
 
             var mapper = new Mapper(config);

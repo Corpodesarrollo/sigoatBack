@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SIGOATS.api.Infra;
 
@@ -11,9 +12,11 @@ using SIGOATS.api.Infra;
 namespace SIGOATS.api.Infra.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251226081224_footer")]
+    partial class footer
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -370,18 +373,6 @@ namespace SIGOATS.api.Infra.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
-                    b.Property<string>("ColorFuentePrimaria")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ColorFuenteSecundaria")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ColorPrimario")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ColorSecundario")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Correos")
                         .HasColumnType("nvarchar(max)");
 
@@ -403,34 +394,13 @@ namespace SIGOATS.api.Infra.Migrations
                     b.Property<string>("Direccion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("EnlaceContactenos")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EnlaceFacebook")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EnlaceInstagram")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EnlaceTwitter")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EnlaceYouTube")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Horarios")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<long?>("IdLogoOficial")
-                        .HasColumnType("bigint");
 
                     b.Property<bool?>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<string>("Telefonos")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Tipografia")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UpdatedByUserId")

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SIGOATS.api.Infra;
 
@@ -11,9 +12,11 @@ using SIGOATS.api.Infra;
 namespace SIGOATS.api.Infra.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251226005542_enlacesInteres")]
+    partial class enlacesInteres
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -215,7 +218,7 @@ namespace SIGOATS.api.Infra.Migrations
                     b.ToTable("Contactenos");
                 });
 
-            modelBuilder.Entity("SIGOATS.api.Core.Models.EnlacesInteres", b =>
+            modelBuilder.Entity("SIGOATS.api.Core.Models.EnlaceInteres", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -254,6 +257,60 @@ namespace SIGOATS.api.Infra.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Target")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Titulo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpdatedByUserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EnlaceInteres");
+                });
+
+            modelBuilder.Entity("SIGOATS.api.Core.Models.EnlacesInteres", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("CreatedByUserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DateDeleted")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DateUpdated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedByUserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Descripcion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Estado")
+                        .HasColumnType("bit");
+
+                    b.Property<bool?>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("Orden")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TipoApertura")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Titulo")
@@ -311,183 +368,6 @@ namespace SIGOATS.api.Infra.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Extenciones");
-                });
-
-            modelBuilder.Entity("SIGOATS.api.Core.Models.FooterFaq", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
-
-                    b.Property<string>("CreatedByUserId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("DateCreated")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DateDeleted")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DateUpdated")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("DeletedByUserId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Destacado")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("Estado")
-                        .HasColumnType("bit");
-
-                    b.Property<bool?>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("Orden")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Pregunta")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Respuesta")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UpdatedByUserId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("FooterFaq");
-                });
-
-            modelBuilder.Entity("SIGOATS.api.Core.Models.FooterInformacionInstitucional", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
-
-                    b.Property<string>("ColorFuentePrimaria")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ColorFuenteSecundaria")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ColorPrimario")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ColorSecundario")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Correos")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CreatedByUserId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("DateCreated")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DateDeleted")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DateUpdated")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("DeletedByUserId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Direccion")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EnlaceContactenos")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EnlaceFacebook")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EnlaceInstagram")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EnlaceTwitter")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EnlaceYouTube")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Horarios")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<long?>("IdLogoOficial")
-                        .HasColumnType("bigint");
-
-                    b.Property<bool?>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Telefonos")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Tipografia")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UpdatedByUserId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("FooterInformacionInstitucional");
-                });
-
-            modelBuilder.Entity("SIGOATS.api.Core.Models.FooterNormatividad", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
-
-                    b.Property<string>("CreatedByUserId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("DateCreated")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DateDeleted")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DateUpdated")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("DeletedByUserId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Destacado")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("Estado")
-                        .HasColumnType("bit");
-
-                    b.Property<bool?>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("Orden")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Titulo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UpdatedByUserId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Url")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("FooterNormatividad");
                 });
 
             modelBuilder.Entity("SIGOATS.api.Core.Models.Imagenes", b =>

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SIGOATS.api.Infra;
 
@@ -11,9 +12,11 @@ using SIGOATS.api.Infra;
 namespace SIGOATS.api.Infra.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251227045824_footer2")]
+    partial class footer2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -421,11 +424,11 @@ namespace SIGOATS.api.Infra.Migrations
                     b.Property<string>("Horarios")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("IdLogoOficial")
-                        .HasColumnType("bigint");
-
                     b.Property<bool?>("IsDeleted")
                         .HasColumnType("bit");
+
+                    b.Property<string>("LogoOficial")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Telefonos")
                         .HasColumnType("nvarchar(max)");

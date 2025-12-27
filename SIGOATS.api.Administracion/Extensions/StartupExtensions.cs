@@ -41,6 +41,11 @@ namespace SIGOATS.api.Api.Extensions
             pBuilder.Services.AddScoped<TablerosRepo>();
             pBuilder.Services.AddScoped<RedesSocialesRepo>();
             pBuilder.Services.AddScoped<ConfiguracionRepo>();
+            pBuilder.Services.AddScoped<EnlaceInteresRepo>();
+            pBuilder.Services.AddScoped<FooterInformacionInstitucionalRepo>();
+            pBuilder.Services.AddScoped<FooterNormatividadRepo>();
+            pBuilder.Services.AddScoped<FooterFaqRepo>();
+
 
             return pBuilder;
         }

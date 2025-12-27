@@ -94,7 +94,7 @@ namespace SIGOATS.api.Infra.Repositorios
             try
             {
                 var noticias = await (from n in db.Noticias
-                                      where n.IdPagina == id
+                                      where n.IdPagina == id && n.Estado == true
                                       orderby n.Orden descending
                                       select new PaginaNoticiaDto
                                       {

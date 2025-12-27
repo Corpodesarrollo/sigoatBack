@@ -17,5 +17,9 @@ namespace SIGOATS.api.Core.DTO
         public string? EnterpriseIdentification { get; set; }
         public bool IsMinSalud { get; set; }
         public bool IsAuth { get; set; }
+
+        public string? Document { get; set; }
+        public string? TypeDocument { get; set; }
+        public string? Password { get; set; }
     }
 }
