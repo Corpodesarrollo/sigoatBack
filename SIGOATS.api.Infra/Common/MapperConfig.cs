@@ -88,6 +88,10 @@ namespace SIGOATS.api.Infra.Common
 
                 cfg.CreateMap<FooterFaq, FooterFaqDto>();
                 cfg.CreateMap<FooterFaqDto, FooterFaq>();
+
+                cfg.CreateMap<CodigosSeguridad, CodigosSeguridadDto>();
+                cfg.CreateMap<CodigosSeguridadDto, CodigosSeguridad>();
+
             });
 
             var mapper = new Mapper(config);

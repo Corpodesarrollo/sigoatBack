@@ -4,6 +4,7 @@ namespace SIGOATS.api.Core.DTO
 {
     public class ConfiguracionDto : BaseDto
     {
+        public int? DiasSinActividad { get; set; }
         public bool RedesSociales { get; set; }
         public string? ColorGovCo { get; set; }
         public string? ColorPrincipal { get; set; }

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SIGOATS.api.Infra;
 
@@ -11,9 +12,11 @@ using SIGOATS.api.Infra;
 namespace SIGOATS.api.Infra.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251229041357_user2")]
+    partial class user2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -222,11 +225,11 @@ namespace SIGOATS.api.Infra.Migrations
 
             modelBuilder.Entity("SIGOATS.api.Core.Models.CodigosSeguridad", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Codigo")
                         .HasColumnType("nvarchar(max)");
@@ -305,9 +308,6 @@ namespace SIGOATS.api.Infra.Migrations
                     b.Property<string>("DeletedByUserId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("DiasSinActividad")
-                        .HasColumnType("int");
-
                     b.Property<long?>("IdLogoDerecho")
                         .HasColumnType("bigint");
 
@@ -379,11 +379,11 @@ namespace SIGOATS.api.Infra.Migrations
 
             modelBuilder.Entity("SIGOATS.api.Core.Models.Emails", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Body")
                         .HasColumnType("nvarchar(max)");
@@ -412,29 +412,6 @@ namespace SIGOATS.api.Infra.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Emails");
-                });
-
-            modelBuilder.Entity("SIGOATS.api.Core.Models.EmailsVariables", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
-
-                    b.Property<long>("EmailId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long>("VariableId")
-                        .HasColumnType("bigint");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("EmailId");
-
-                    b.HasIndex("VariableId");
-
-                    b.ToTable("EmailsVariables");
                 });
 
             modelBuilder.Entity("SIGOATS.api.Core.Models.EnlacesInteres", b =>
@@ -1487,9 +1464,6 @@ namespace SIGOATS.api.Infra.Migrations
                     b.Property<string>("TypeDocument")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UltimoLogin")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("UpdatedByUserId")
                         .HasColumnType("nvarchar(max)");
 
@@ -1508,25 +1482,6 @@ namespace SIGOATS.api.Infra.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("Usuarios", (string)null);
-                });
-
-            modelBuilder.Entity("SIGOATS.api.Core.Models.Variables", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
-
-                    b.Property<string>("Key")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Value")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Variables");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<long>", b =>
@@ -1578,25 +1533,6 @@ namespace SIGOATS.api.Infra.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("SIGOATS.api.Core.Models.EmailsVariables", b =>
-                {
-                    b.HasOne("SIGOATS.api.Core.Models.Emails", "Emails")
-                        .WithMany()
-                        .HasForeignKey("EmailId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("SIGOATS.api.Core.Models.Variables", "Variables")
-                        .WithMany()
-                        .HasForeignKey("VariableId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Emails");
-
-                    b.Navigation("Variables");
                 });
 #pragma warning restore 612, 618
         }

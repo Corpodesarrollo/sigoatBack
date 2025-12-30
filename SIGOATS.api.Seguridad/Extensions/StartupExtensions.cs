@@ -1,4 +1,7 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using SIGOATS.api.Core.DTO;
+using SIGOATS.api.Core.Models;
 using SIGOATS.api.Infra;
 using SIGOATS.api.Infra.Interfaces;
 using SIGOATS.api.Infra.Repositorios;
@@ -26,6 +29,20 @@ namespace SIGOATS.api.Api.Extensions
             pBuilder.Services.AddScoped<RolesRepo>();
             pBuilder.Services.AddScoped<UsersRepo>();
             pBuilder.Services.AddScoped<PermisosRepo>();
+            pBuilder.Services.AddScoped<SeguridadRepo>();
+            pBuilder.Services.AddScoped<AesEncryptionRepo>();
+            pBuilder.Services.AddScoped<EmailManagerRepo>();
+            pBuilder.Services.AddScoped<CodigosSeguridadRepo>();
+            pBuilder.Services.AddScoped<VariablesRepo>();
+            pBuilder.Services.AddScoped<ConfigSMTPRepo>();
+            pBuilder.Services.AddScoped<EmailsRepo>();
+            pBuilder.Services.AddScoped<HelpersRepo>();
+
+            pBuilder.Services.AddIdentity<Usuarios, Roles>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+
+            pBuilder.Services.Configure<EncryptionSettingsDto>(pBuilder.Configuration.GetSection("EncryptionSettings"));
 
             return pBuilder;
         }

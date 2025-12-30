@@ -1,10 +1,12 @@
 #region Librerias
 
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.IdentityModel.Tokens;
 using SIGOATS.api.Api.Extensions;
 using SISPRO.TRV.General;
 using SISPRO.TRV.Web.MVCCore.Helpers;
 using SISPRO.TRV.Web.MVCCore.StartupExtensions;
+using System.Text;
 using System.Text.Json;
 
 #endregion
@@ -41,6 +43,22 @@ builder.Services.AddCors(options =>
                          .AllowAnyMethod();
         });
 });
+
+builder.Services.AddAuthentication()
+    .AddJwtBearer("InternalAuth", options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["JwtInternal:Issuer"],
+            ValidAudience = builder.Configuration["JwtInternal:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["JwtInternal:Key"]))
+        };
+    });
 
 WebApplication app = builder.Build();
 

@@ -25,11 +25,23 @@ builder
 
 builder.Services.AddCustomSwagger();
 
-builder.Services.AddCustomAuthentication(true);
+builder.Services.AddCustomAuthentication(
+    pAddOldESFAuth: false,
+    pAddANDOAuthForAPI: true,
+    pAddANDOAuthForWeb: true);
 
+//builder.Services.AddHostedService<TareaEnSegundoPlano>();
 
 // Registro de los servicios
 builder.CustomConfigureServices();
+
+builder.Services.AddLogging(logging =>
+{
+    logging.AddConsole();
+    logging.AddDebug();
+    logging.SetMinimumLevel(LogLevel.Debug);
+});
+
 
 var allowedOrigins = builder.Configuration.GetSection("AllowedCorsOrigins").Get<string[]>();
 builder.Services.AddCors(options =>

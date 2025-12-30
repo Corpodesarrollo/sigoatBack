@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SIGOATS.api.Infra;
 
@@ -11,9 +12,11 @@ using SIGOATS.api.Infra;
 namespace SIGOATS.api.Infra.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251229075757_user3")]
+    partial class user3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -222,11 +225,11 @@ namespace SIGOATS.api.Infra.Migrations
 
             modelBuilder.Entity("SIGOATS.api.Core.Models.CodigosSeguridad", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Codigo")
                         .HasColumnType("nvarchar(max)");
@@ -304,9 +307,6 @@ namespace SIGOATS.api.Infra.Migrations
 
                     b.Property<string>("DeletedByUserId")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("DiasSinActividad")
-                        .HasColumnType("int");
 
                     b.Property<long?>("IdLogoDerecho")
                         .HasColumnType("bigint");
@@ -1486,9 +1486,6 @@ namespace SIGOATS.api.Infra.Migrations
 
                     b.Property<string>("TypeDocument")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("UltimoLogin")
-                        .HasColumnType("datetime2");
 
                     b.Property<string>("UpdatedByUserId")
                         .HasColumnType("nvarchar(max)");
